@@ -143,8 +143,10 @@ object PhysicalNetworkHelper {
 
 object RealVpnDialer {
 
+    private val permissiveSslContext: SSLContext by lazy { createPermissiveSslContext() }
+
     @SuppressLint("CustomX509TrustManager", "TrustAllX509TrustManager")
-    private val permissiveSslContext: SSLContext by lazy {
+    private fun createPermissiveSslContext(): SSLContext {
         val trustAll = arrayOf<TrustManager>(
             object : X509TrustManager {
                 override fun checkClientTrusted(chain: Array<out X509Certificate>?, authType: String?) = Unit
@@ -154,7 +156,7 @@ object RealVpnDialer {
                 override fun getAcceptedIssuers(): Array<X509Certificate> = emptyArray()
             }
         )
-        SSLContext.getInstance("TLS").apply {
+        return SSLContext.getInstance("TLS").apply {
             init(null, trustAll, SecureRandom())
         }
     }

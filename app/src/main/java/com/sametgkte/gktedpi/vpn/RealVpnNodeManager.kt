@@ -680,7 +680,8 @@ object RealVpnNodeManager {
                 val n = session.input.read(buf)
                 if (n <= 0) break
                 sb.append(String(buf, 0, n, StandardCharsets.ISO_8859_1))
-                if (sb.contains("\r\n\r\n") && sb.substringAfter("\r\n\r\n").count { it == '\n' } >= 2) break
+                                val cur = sb.toString()
+                if (cur.contains("\r\n\r\n") && cur.substringAfter("\r\n\r\n").count { ch -> ch == '\n' } >= 2) break
             }
             val raw = sb.toString()
             if (!raw.contains("\r\n\r\n")) return null

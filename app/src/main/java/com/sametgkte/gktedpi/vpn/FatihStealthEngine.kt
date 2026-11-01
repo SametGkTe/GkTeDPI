@@ -184,8 +184,10 @@ object FatihStealthEngine {
         )
     }
 
+     val antiMitmSslContext: SSLContext by lazy { createAntiMitmSslContext() }
+
     @SuppressLint("CustomX509TrustManager", "TrustAllX509TrustManager")
-    val antiMitmSslContext: SSLContext by lazy {
+    private fun createAntiMitmSslContext(): SSLContext {
         val tm = arrayOf<TrustManager>(
             object : X509TrustManager {
                 override fun checkClientTrusted(chain: Array<out X509Certificate>?, authType: String?) = Unit
@@ -195,7 +197,7 @@ object FatihStealthEngine {
                 override fun getAcceptedIssuers(): Array<X509Certificate> = emptyArray()
             }
         )
-        SSLContext.getInstance("TLS").apply {
+        return SSLContext.getInstance("TLS").apply {
             init(null, tm, SecureRandom())
         }
     }
