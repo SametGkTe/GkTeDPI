@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Crystal Light Liquid Glass Palette (Day / Light Mode) -->
+    <color name="glass_bg_base">#FFE8F0FA</color>
+    <color name="glass_card_fill">#B8FFFFFF</color>
+    <color name="glass_card_fill_elevated">#D8FFFFFF</color>
+    <color name="glass_card_stroke_top">#F2FFFFFF</color>
+    <color name="glass_card_stroke_bottom">#99CBD5E1</color>
+    <color name="glass_pill_fill">#88FFFFFF</color>
+    <color name="glass_pill_active_fill">#D822C55E</color>
+    <color name="glass_divider">#330F172A</color>
+
+    <color name="text_primary">#FF0B1220</color>
+    <color name="text_secondary">#FF283548</color>
+    <color name="text_tertiary">#FF475569</color>
+
+    <color name="button_green_primary">#FF16A34A</color>
+    <color name="button_green_active">#FF22C55E</color>
+    <color name="button_green_muted">#2616A34A</color>
+    <color name="accent_primary">#FF16A34A</color>
+    <color name="accent_secondary">#FF059669</color>
+    <color name="status_connected">#FF16A34A</color>
+    <color name="status_connected_bg">#2922C55E</color>
+    <color name="status_disconnected">#FF334155</color>
+    <color name="status_disconnected_bg">#220F172A</color>
+    <color name="danger_color">#FFEF4444</color>
+</resources>

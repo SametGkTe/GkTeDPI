@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="themes">
+        <item>Night Liquid Glass</item>
+        <item>Pure AMOLED Glass</item>
+        <item>Crystal Light Glass</item>
+        <item>System Auto</item>
+    </array>
+    <array name="themes_entries">
+        <item>dark</item>
+        <item>amoled</item>
+        <item>light</item>
+        <item>system</item>
+    </array>
+
+    <array name="byedpi_modes">
+        <item>VPN Tunnel (Tun2Socks)</item>
+        <item>Local SOCKS5 Proxy</item>
+    </array>
+    <array name="byedpi_modes_entries">
+        <item>vpn</item>
+        <item>proxy</item>
+    </array>
+
+    <array name="dns_presets">
+        <item>Custom DNS</item>
+        <item>Cloudflare (1.1.1.1)</item>
+        <item>Cloudflare Malware Block (1.1.1.2)</item>
+        <item>AdGuard DNS (94.140.14.14)</item>
+        <item>Quad9 Secure (9.9.9.9)</item>
+        <item>Google DNS (8.8.8.8)</item>
+        <item>Mullvad Privacy (194.242.2.2)</item>
+        <item>ControlD (76.76.2.0)</item>
+    </array>
+    <array name="dns_presets_entries">
+        <item>custom</item>
+        <item>cloudflare</item>
+        <item>cloudflare_security</item>
+        <item>adguard</item>
+        <item>quad9</item>
+        <item>google</item>
+        <item>mullvad</item>
+        <item>controld</item>
+    </array>
+
+    <array name="tun2socks_udp_modes">
+        <item>Direct UDP (Recommended for Voice/Games)</item>
+        <item>UDP over TCP</item>
+    </array>
+    <array name="tun2socks_udp_modes_entries">
+        <item>udp</item>
+        <item>tcp</item>
+    </array>
+
+    <array name="debug_levels">
+        <item>0 - Minimal</item>
+        <item>1 - Standard</item>
+        <item>2 - Verbose Packet Logs</item>
+    </array>
+    <array name="debug_levels_entries">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </array>
+
+    <array name="byedpi_desync_methods">
+        <item>None</item>
+        <item>Split (-s)</item>
+        <item>Disorder (-d)</item>
+        <item>Fake (-f)</item>
+        <item>Out-of-Band (-o)</item>
+        <item>Disordered OOB (-q)</item>
+    </array>
+    <array name="byedpi_desync_methods_entries">
+        <item>none</item>
+        <item>split</item>
+        <item>disorder</item>
+        <item>fake</item>
+        <item>oob</item>
+        <item>disoob</item>
+    </array>
+
+    <array name="byedpi_offset_flags">
+        <item>Absolute Byte Offset (None)</item>
+        <item>+s (TLS SNI Offset)</item>
+        <item>+h (HTTP Host Offset)</item>
+        <item>+e (Packet End Offset)</item>
+    </array>
+    <array name="byedpi_offset_flags_entries">
+        <item>none</item>
+        <item>sni</item>
+        <item>host</item>
+        <item>end</item>
+    </array>
+
+    <array name="byedpi_hosts_modes">
+        <item>Disabled (All Domains)</item>
+        <item>Blacklist (Bypass Listed Domains)</item>
+        <item>Whitelist (Only Listed Domains)</item>
+    </array>
+    <array name="byedpi_hosts_modes_entries">
+        <item>disable</item>
+        <item>blacklist</item>
+        <item>whitelist</item>
+    </array>
+</resources>

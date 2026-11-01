@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/serversRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/glass_bg_base">
+
+    <com.sametgkte.gktedpi.ui.LiquidAmbientBackgroundView
+        android:id="@+id/serversAmbientBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/serversContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- TOP HEADER -->
+        <LinearLayout
+            android:id="@+id/serversHeaderCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_liquid_glass_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/serversBackBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_liquid_glass_pill"
+                android:fontFamily="@font/pjs_bold"
+                android:paddingStart="13dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="7dp"
+                android:text="@string/back"
+                android:textColor="@color/text_primary"
+                android:textSize="12.5sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/pjs_extrabold"
+                android:text="@string/servers_screen_title"
+                android:textColor="@color/text_primary"
+                android:textSize="17.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnAddCustomServer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_liquid_glass_pill_active"
+                android:fontFamily="@font/pjs_bold"
+                android:paddingStart="13dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="7dp"
+                android:text="@string/vpn_add_custom_btn"
+                android:textColor="#FFFFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- DUAL-ENGINE SEGMENTED SWITCHER: REAL COUNTRY VPN vs SIMPLE DPI -->
+        <LinearLayout
+            android:id="@+id/serversTabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_liquid_glass_card"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tabBtnRealVpn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_liquid_glass_pill_active"
+                android:fontFamily="@font/pjs_extrabold"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/servers_tab_real_vpn"
+                android:textColor="#FFFFFFFF"
+                android:textSize="12.5sp" />
+
+            <TextView
+                android:id="@+id/tabBtnSimpleDpi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_liquid_glass_pill"
+                android:fontFamily="@font/pjs_extrabold"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/servers_tab_simple_dpi"
+                android:textColor="@color/text_primary"
+                android:textSize="12.5sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="28dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- ========================================================= -->
+                <!-- COMPARTMENT A: REAL MULTI-COUNTRY VPN (PROTON VPN STYLE)  -->
+                <!-- ========================================================= -->
+                <LinearLayout
+                    android:id="@+id/sectionRealVpnWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- FATİH / SCHOOL NGFW BYPASS (EVEREST / PORT-443 STEALTH) -->
+                    <LinearLayout
+                        android:id="@+id/cardFatihStealth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_electron_icon_box"
+                            android:gravity="center"
+                            android:text="🏫"
+                            android:textSize="19sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_extrabold"
+                                android:text="@string/fatih_stealth_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tvFatihStealthSub"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/pjs_medium"
+                                android:text="@string/fatih_stealth_sub_off"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchFatihStealth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/bentoQuickConnectVpn"
+                            android:layout_width="0dp"
+                            android:layout_height="108dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_liquid_glass_card"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_vec_bolt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_extrabold"
+                                android:text="@string/vpn_quick_connect_title"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/pjs_medium"
+                                android:text="@string/vpn_quick_connect_sub"
+                                android:textColor="#DDFFFFFF"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bentoRefreshCountryPings"
+                            android:layout_width="0dp"
+                            android:layout_height="108dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_liquid_glass_card"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_vec_globe" />
+
+                            <TextView
+                                android:id="@+id/vpnRefreshPingTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_extrabold"
+                                android:text="@string/vpn_scan_pings_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/vpnRefreshPingSub"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/pjs_medium"
+                                android:text="@string/vpn_scan_pings_sub"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/customVpnSectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:letterSpacing="0.06"
+                        android:text="@string/vpn_custom_servers_section"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/customVpnContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:letterSpacing="0.06"
+                        android:text="@string/vpn_countries_section"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/vpnCountriesContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <!-- ========================================================= -->
+                <!-- COMPARTMENT B: SIMPLIFIED ZERO-SPEED-LOSS DPI MODES       -->
+                <!-- ========================================================= -->
+                <LinearLayout
+                    android:id="@+id/sectionSimpleDpiWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/bentoAutoBenchmark"
+                            android:layout_width="0dp"
+                            android:layout_height="108dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_liquid_glass_card"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_vec_bolt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_extrabold"
+                                android:text="@string/servers_benchmark_title"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/pjs_medium"
+                                android:text="@string/servers_benchmark_sub"
+                                android:textColor="#DDFFFFFF"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bentoAutoIspQuick"
+                            android:layout_width="0dp"
+                            android:layout_height="108dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_liquid_glass_card"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_vec_globe" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_extrabold"
+                                android:text="@string/servers_auto_isp_short"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/serversAutoIspSub"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/pjs_medium"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- SIMPLIFIED EVERYDAY DPI MODES FIRST -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:letterSpacing="0.06"
+                        android:text="@string/servers_presets_section"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/builtinModesContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <!-- SAVED / USER PROFILES -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:letterSpacing="0.06"
+                        android:text="@string/servers_saved_section"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/savedProfilesContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

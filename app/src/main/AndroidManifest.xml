@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="rikka.shizuku.provider,rikka.shizuku.api,rikka.shizuku.shared,rikka.shizuku.aidl" />
+
+    <permission
+        android:name="com.sametgkte.gktedpi.permission.CONTROL_VPN"
+        android:label="Control GkTeDPI VPN"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <queries>
+        <package android:name="moe.shizuku.privileged.api" />
+        <package android:name="com.sametgkte.gktetok" />
+        <package android:name="com.sametgkte.gktearchive" />
+        <package android:name="com.sametgkte.gktepatcher" />
+    </queries>
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:name=".GkTeDpiApp"
+        android:allowBackup="true"
+        android:banner="@mipmap/ic_launcher_foreground"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GkTeDPI"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".IconAliasAmoled"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_amoled"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_amoled"
+            android:targetActivity=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".IconAliasOcean"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_cyan"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_cyan"
+            android:targetActivity=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".IconAliasCrystal"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_light"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_light"
+            android:targetActivity=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- Zero-UI Translucent Inter-App VPN API Gateway & gktedpi:// Deep Link Handler -->
+        <activity
+            android:name=".api.ExternalApiActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@style/Theme.GkTeDPI.TransparentApi">
+            <intent-filter>
+                <action android:name="com.sametgkte.gktedpi.api.START" />
+                <action android:name="com.sametgkte.gktedpi.api.STOP" />
+                <action android:name="com.sametgkte.gktedpi.api.TOGGLE" />
+                <action android:name="com.sametgkte.gktedpi.api.NEXT_PROFILE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="gktedpi" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.SmartHubActivity"
+            android:exported="false"
+            android:label="@string/smart_hub_title" />
+
+        <activity
+            android:name=".activities.ServersActivity"
+            android:exported="false"
+            android:label="@string/servers_screen_title" />
+
+        <activity
+            android:name=".activities.AppearanceActivity"
+            android:exported="false"
+            android:label="@string/appearance_hub_title" />
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_settings"
+            android:theme="@style/Theme.GkTeDPI.Settings" />
+
+        <activity
+            android:name=".activities.AppSelectionActivity"
+            android:exported="false"
+            android:label="@string/split_tunnel_title" />
+
+        <activity
+            android:name=".activities.StrategyTesterActivity"
+            android:exported="false"
+            android:label="@string/strategy_tester_title" />
+
+        <activity
+            android:name=".activities.LogsActivity"
+            android:exported="false"
+            android:label="@string/logs_backup_title" />
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:exported="false"
+            android:label="@string/about_screen_title" />
+
+        <!-- Secure FileProvider for In-App Self-Update APK Installer -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Synchronous Inter-App VPN RPC ContentProvider -->
+        <provider
+            android:name=".api.GkTeApiProvider"
+            android:authorities="com.sametgkte.gktedpi.api"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- Shizuku Binder IPC Provider -->
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="false"
+            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+        <service
+            android:name=".services.ByeDpiVpnService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON"
+                android:value="true" />
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="vpn" />
+        </service>
+
+        <service
+            android:name=".services.ByeDpiProxyService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="proxy" />
+        </service>
+
+        <!-- Zero-CPU Event-Driven App-Based Auto Trigger Service -->
+        <service
+            android:name=".services.GkTeAppWatcherService"
+            android:exported="false"
+            android:label="@string/app_watcher_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/gkte_app_watcher_service" />
+        </service>
+
+        <service
+            android:name=".services.QuickTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_notification"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Inter-App Broadcast VPN API Receiver -->
+        <receiver
+            android:name=".api.ExternalControlReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.sametgkte.gktedpi.api.BROADCAST_START" />
+                <action android:name="com.sametgkte.gktedpi.api.BROADCAST_STOP" />
+                <action android:name="com.sametgkte.gktedpi.api.BROADCAST_TOGGLE" />
+                <action android:name="com.sametgkte.gktedpi.api.BROADCAST_STATUS" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Home Screen Liquid Glass Widgets -->
+        <receiver
+            android:name=".widget.GkTeCompactWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_compact_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_gkte_compact_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.GkTeControlWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_control_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_gkte_control_info" />
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="themes">
+        <item>Gece Liquid Glass</item>
+        <item>Saf AMOLED Cam</item>
+        <item>Kristal Açık Cam</item>
+        <item>Sistem Otomatik</item>
+    </array>
+    <array name="themes_entries">
+        <item>dark</item>
+        <item>amoled</item>
+        <item>light</item>
+        <item>system</item>
+    </array>
+
+    <array name="byedpi_modes">
+        <item>VPN Tüneli (Tun2Socks)</item>
+        <item>Sadece Yerel SOCKS5 Proxy</item>
+    </array>
+    <array name="byedpi_modes_entries">
+        <item>vpn</item>
+        <item>proxy</item>
+    </array>
+
+    <array name="dns_presets">
+        <item>Özel DNS (Manuel)</item>
+        <item>Cloudflare (1.1.1.1)</item>
+        <item>Cloudflare Zararlı Engelleme (1.1.1.2)</item>
+        <item>AdGuard DNS (94.140.14.14)</item>
+        <item>Quad9 Güvenli (9.9.9.9)</item>
+        <item>Google DNS (8.8.8.8)</item>
+        <item>Mullvad Gizlilik (194.242.2.2)</item>
+        <item>ControlD (76.76.2.0)</item>
+    </array>
+    <array name="dns_presets_entries">
+        <item>custom</item>
+        <item>cloudflare</item>
+        <item>cloudflare_security</item>
+        <item>adguard</item>
+        <item>quad9</item>
+        <item>google</item>
+        <item>mullvad</item>
+        <item>controld</item>
+    </array>
+
+    <array name="tun2socks_udp_modes">
+        <item>Doğrudan UDP (Ses/Oyun İçin Önerilen)</item>
+        <item>TCP Üzerinden UDP</item>
+    </array>
+    <array name="tun2socks_udp_modes_entries">
+        <item>udp</item>
+        <item>tcp</item>
+    </array>
+
+    <array name="debug_levels">
+        <item>0 - Minimal</item>
+        <item>1 - Standart</item>
+        <item>2 - Ayrıntılı Paket Günlüğü</item>
+    </array>
+    <array name="debug_levels_entries">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </array>
+
+    <array name="byedpi_desync_methods">
+        <item>Yok (Devre Dışı)</item>
+        <item>Split - Bölme (-s)</item>
+        <item>Disorder - Ters Sıra (-d)</item>
+        <item>Fake - Sahte Paket (-f)</item>
+        <item>Out-of-Band (-o)</item>
+        <item>Disordered OOB (-q)</item>
+    </array>
+    <array name="byedpi_desync_methods_entries">
+        <item>none</item>
+        <item>split</item>
+        <item>disorder</item>
+        <item>fake</item>
+        <item>oob</item>
+        <item>disoob</item>
+    </array>
+
+    <array name="byedpi_offset_flags">
+        <item>Sabit Bayt Konumu (Yok)</item>
+        <item>+s (TLS SNI Konumu)</item>
+        <item>+h (HTTP Host Konumu)</item>
+        <item>+e (Paket Sonu Konumu)</item>
+    </array>
+    <array name="byedpi_offset_flags_entries">
+        <item>none</item>
+        <item>sni</item>
+        <item>host</item>
+        <item>end</item>
+    </array>
+
+    <array name="byedpi_hosts_modes">
+        <item>Devre Dışı (Tüm Siteler)</item>
+        <item>Kara Liste (Listedekilere Uygulama)</item>
+        <item>Beyaz Liste (Sadece Listedekilere Uygula)</item>
+    </array>
+    <array name="byedpi_hosts_modes_entries">
+        <item>disable</item>
+        <item>blacklist</item>
+        <item>whitelist</item>
+    </array>
+</resources>

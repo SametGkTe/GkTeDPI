@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:tag="main_settings">
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/general_category">
+
+        <DropDownPreference
+            android:key="app_theme"
+            android:title="@string/theme_settings"
+            android:entries="@array/themes"
+            android:entryValues="@array/themes_entries"
+            android:defaultValue="dark"
+            app:useSimpleSummaryProvider="true" />
+
+        <DropDownPreference
+            android:key="byedpi_mode"
+            android:title="@string/mode_setting"
+            android:entries="@array/byedpi_modes"
+            android:entryValues="@array/byedpi_modes_entries"
+            android:defaultValue="vpn"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreference
+            android:key="auto_start_boot"
+            android:title="@string/auto_start_boot_title"
+            android:summary="@string/auto_start_boot_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="auto_connect_launch"
+            android:title="@string/auto_connect_launch_title"
+            android:summary="@string/auto_connect_launch_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="live_notification_stats"
+            android:title="@string/live_notification_stats_title"
+            android:summary="@string/live_notification_stats_summary"
+            android:defaultValue="true" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:key="vpn_network_category"
+        android:title="@string/vpn_network_category">
+
+        <DropDownPreference
+            android:key="dns_preset"
+            android:title="@string/dns_preset_title"
+            android:entries="@array/dns_presets"
+            android:entryValues="@array/dns_presets_entries"
+            android:defaultValue="cloudflare"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.takisoft.preferencex.EditTextPreference
+            android:key="dns_ip"
+            android:title="@string/dbs_ip_setting"
+            android:defaultValue="1.1.1.1"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.takisoft.preferencex.EditTextPreference
+            android:key="dns_ip_secondary"
+            android:title="@string/dns_ip_secondary_setting"
+            android:defaultValue="1.0.0.1"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreference
+            android:key="ipv6_enable"
+            android:title="@string/ipv6_setting"
+            android:defaultValue="false" />
+
+        <com.takisoft.preferencex.EditTextPreference
+            android:key="dns_ipv6"
+            android:title="@string/dns_ipv6_setting"
+            android:defaultValue="2606:4700:4700::1111"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreference
+            android:key="lan_bypass"
+            android:title="@string/lan_bypass_title"
+            android:summary="@string/lan_bypass_summary"
+            android:defaultValue="true" />
+
+        <com.takisoft.preferencex.EditTextPreference
+            android:key="vpn_mtu"
+            android:title="@string/vpn_mtu_title"
+            android:inputType="number"
+            android:defaultValue="8500"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.takisoft.preferencex.EditTextPreference
+            android:key="tun_ipv4"
+            android:title="@string/tun_ipv4_title"
+            android:defaultValue="198.18.0.1"
+            app:useSimpleSummaryProvider="true" />
+
+        <DropDownPreference
+            android:key="tun2socks_udp_mode"
+            android:title="@string/tun2socks_udp_mode_title"
+            android:entries="@array/tun2socks_udp_modes"
+            android:entryValues="@array/tun2socks_udp_modes_entries"
+            android:defaultValue="udp"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.takisoft.preferencex.EditTextPreference
+            android:key="tun2socks_stack_size"
+            android:title="@string/tun2socks_stack_size_title"
+            android:inputType="number"
+            android:defaultValue="81920"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            android:key="open_split_tunnel"
+            android:title="@string/split_tunnel_title"
+            android:summary="@string/split_tunnel_desc" />
+
+        <Preference
+            android:key="open_smart_hub"
+            android:title="@string/smart_hub_title"
+            android:summary="@string/smart_hub_summary" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/byedpi_category">
+
+        <Preference
+            android:key="load_isp_preset"
+            android:title="@string/load_isp_preset_title"
+            android:summary="@string/load_isp_preset_summary" />
+
+        <SwitchPreference
+            android:key="byedpi_enable_cmd_settings"
+            android:title="@string/use_command_line_settings"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="byedpi_ui_settings"
+            android:title="@string/ui_editor"
+            android:summary="@string/ui_editor_summary"
+            app:fragment="com.sametgkte.gktedpi.fragments.ByeDpiUISettingsFragment" />
+
+        <Preference
+            android:key="byedpi_cmd_settings"
+            android:title="@string/command_line_editor"
+            android:summary="@string/command_line_editor_summary"
+            app:fragment="com.sametgkte.gktedpi.fragments.ByeDpiCommandLineSettingsFragment" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/external_api_category">
+
+        <SwitchPreference
+            android:key="external_api_enabled"
+            android:title="@string/external_api_enable_title"
+            android:summary="@string/external_api_enable_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="external_api_require_token"
+            android:title="@string/external_api_require_token_title"
+            android:summary="@string/external_api_require_token_summary"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="open_api_docs"
+            android:title="@string/external_api_docs_title"
+            android:summary="@string/external_api_docs_summary" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/about_category">
+
+        <Preference
+            android:key="version"
+            android:title="@string/version"
+            tools:summary="2.0.0" />
+
+        <Preference
+            android:key="source_code"
+            android:title="@string/source_code_link"
+            android:icon="@drawable/ic_github_36">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/sametgkte/GkTeDPI" />
+        </Preference>
+
+    </androidx.preference.PreferenceCategory>
+
+</PreferenceScreen>

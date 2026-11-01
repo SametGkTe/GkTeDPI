@@ -1,0 +1,429 @@
+<resources>
+    <string name="liquid_engine_subtitle">AMOLED DPI Motoru</string>
+
+    <string name="tab_home">Ana Sayfa</string>
+    <string name="tab_utilities">Utilities</string>
+    <string name="tab_settings">Ayarlar</string>
+
+    <string name="vpn_and_dpi_modes_title">VPN VE DPI MODLARI</string>
+    <string name="vpn_mode_row_label">Bağlantı Modu</string>
+    <string name="dpi_mode_row_label">DPI Aşma Modu</string>
+    <string name="mode_btn_real_vpn">🌍 Gerçek VPN</string>
+    <string name="mode_btn_vpn">⚡ DPI Modu</string>
+    <string name="mode_btn_proxy">🔌 Proxy</string>
+    <string name="copy_short">Kopyala</string>
+
+    <string name="gkte_connect_tool_subtitle">Entegre GkTe Ekosistem Araçları</string>
+    <string name="utility_nectarlink_desc">Telefon &amp; PC Şifreli Bağlantı</string>
+    <string name="utility_lmplayground_desc">Cihaz İçi Yerel Yapay Zeka</string>
+    <string name="utility_shizuku_desc">Sistem API Köprüsü</string>
+
+    <string name="tester_short_btn">Strateji Testi</string>
+    <string name="logs_short_btn">Log &amp; Yedek</string>
+
+    <!-- Kişiselleştirme, Widget ve Harici API Geçidi -->
+    <string name="personalization_title">Kişiselleştirme &amp; Liquid Glass</string>
+    <string name="personalization_theme_label">Tema Modu</string>
+    <string name="personalization_accent_label">Cam Vurgu Rengi</string>
+    <string name="personalization_frost_label">Cam Efektleri</string>
+    <string name="frost_clear">Kristal</string>
+    <string name="frost_balanced">Dengeli</string>
+    <string name="frost_heavy">Buzlu</string>
+    <string name="refraction_prism">Prizma Kırılma</string>
+    <string name="liquid_motion_bg">Sıvı Arkaplan</string>
+    <string name="pin_widget_btn">+ Widget Ekle</string>
+    <string name="pin_widget_dialog_title">Ana Ekrana Liquid Glass Widget Ekle</string>
+    <string name="widget_compact_name">GkTeDPI Kompakt (2x2)</string>
+    <string name="widget_compact_desc">Tek dokunuşla Liquid Glass VPN aç/kapat</string>
+    <string name="widget_control_name">GkTeDPI Kontrol Paneli (4x2)</string>
+    <string name="widget_control_desc">Canlı durum, hızlı profil değiştirme ve VPN kontrolü</string>
+    <string name="widget_switch_profile">Profil Değiştir</string>
+    <string name="widget_pin_unsupported">Ana ekrana basılı tutup Widget menüsünden GkTeDPI ekleyebilirsiniz</string>
+
+    <string name="external_api_category">Uygulamalar Arası VPN API Geçidi</string>
+    <string name="external_api_enable_title">Harici Uygulama API Geçidini Aç</string>
+    <string name="external_api_enable_summary">GkteTok, NectarLink ve diğer uygulamaların VPN\'i açıp kapatmasına izin ver</string>
+    <string name="external_api_require_token_title">API Güvenlik Anahtarı Zorunlu Tut</string>
+    <string name="external_api_require_token_summary">Harici isteklerde api_token doğrulaması iste</string>
+    <string name="external_api_docs_title">API Geçidi Kodları &amp; Anahtar</string>
+    <string name="external_api_docs_summary">Kotlin Intent, ContentProvider ve gktedpi:// bağlantı kodunu kopyala</string>
+    <string name="external_api_copied">API entegrasyon kodu panoya kopyalandı</string>
+    <string name="external_api_new_token">Anahtarı Yenile</string>
+
+    <string name="vpn_connect">Bağlan</string>
+    <string name="vpn_disconnect">Bağlantıyı Kes</string>
+    <string name="vpn_connected">Bağlı • Korunuyor</string>
+    <string name="vpn_disconnected">Hazır • Bağlantı Kesik</string>
+    <string name="proxy_up">SOCKS5 Proxy Aktif</string>
+    <string name="proxy_down">SOCKS5 Proxy Kapalı</string>
+    <string name="proxy_start">Proxy Başlat</string>
+    <string name="proxy_stop">Proxy Durdur</string>
+
+    <string name="settings">Ayarlar</string>
+    <string name="title_settings">GkTeDPI Esnek Ayarlar</string>
+    <string name="back">Geri</string>
+    <string name="refresh">Yenile</string>
+    <string name="save_logs">Kaydet (.log)</string>
+    <string name="reset_settings">Sıfırla</string>
+    <string name="logs_failed">Günlük kayıtları alınamadı</string>
+    <string name="vpn_permission_denied">VPN izni reddedildi</string>
+    <string name="failed_to_start">%1$s başlatılamadı</string>
+    <string name="invalid_preference_value">%1$s için geçersiz değer: %2$s</string>
+
+    <string name="download_label">İNDİRME</string>
+    <string name="upload_label">YÜKLEME</string>
+    <string name="endpoint_summary">%1$s:%2$s • DNS %3$s</string>
+
+    <string name="active_profile_label">AKTİF PROFİL</string>
+    <string name="presets_button">İSS Şablonları</string>
+    <string name="manage_profiles_button">+ Profil</string>
+    <string name="copy_command">Komutu kopyala</string>
+    <string name="command_copied">CLI komutu panoya kopyalandı</string>
+
+    <string name="flexible_engine_title">Esnek Motor &amp; Ağ</string>
+    <string name="flexible_engine_desc">Desync, DNS, MTU, LAN bypass &amp; CLI</string>
+    <string name="split_tunnel_title">Bölünmüş Tünel</string>
+    <string name="split_tunnel_desc">Tüm uygulamalar dahil</string>
+    <string name="split_tunnel_whitelist_count">Sadece Seçili • %1$d uygulama</string>
+    <string name="split_tunnel_blacklist_count">Hariç Tutulan • %1$d uygulama</string>
+    <string name="strategy_tester_title">Otomatik Strateji Testi</string>
+    <string name="strategy_tester_desc">En hızlı DPI aşma yöntemini bul</string>
+    <string name="logs_backup_title">Canlı Log &amp; Yedek</string>
+    <string name="logs_backup_desc">Logcat konsolu &amp; JSON İçe/Dışa Aktar</string>
+
+    <string name="vpn_channel_name">GkTeDPI VPN Tüneli</string>
+    <string name="proxy_channel_name">GkTeDPI SOCKS5 Proxy</string>
+    <string name="notification_title">GkTeDPI Çalışıyor</string>
+    <string name="vpn_notification_active_profile">%1$s • Tünel trafiği koruyor</string>
+    <string name="notification_stop">Durdur</string>
+    <string name="notification_restart">Yenile</string>
+
+    <string name="general_category">Görünüm &amp; Otomasyon</string>
+    <string name="theme_settings">Liquid Glass Tema Modu</string>
+    <string name="mode_setting">Çalışma Modu</string>
+    <string name="auto_start_boot_title">Telefon Açılışında Başlat</string>
+    <string name="auto_start_boot_summary">Cihaz yeniden başladığında GkTeDPI tünelini otomatik aç</string>
+    <string name="auto_connect_launch_title">Uygulama Açılışında Bağlan</string>
+    <string name="auto_connect_launch_summary">GkTeDPI açıldığında otomatik bağlantı kur</string>
+    <string name="live_notification_stats_title">Bildirimde Canlı Hız Göster</string>
+    <string name="live_notification_stats_summary">Anlık indirme ve yükleme hızını bildirim çubuğunda göster</string>
+
+    <string name="vpn_network_category">Gelişmiş VPN, DNS &amp; Yönlendirme</string>
+    <string name="dns_preset_title">Hazır DNS Sağlayıcısı</string>
+    <string name="dbs_ip_setting">Birincil DNS (IPv4)</string>
+    <string name="dns_ip_secondary_setting">İkincil / Yedek DNS</string>
+    <string name="ipv6_setting">IPv6 Yönlendirmeyi Etkinleştir</string>
+    <string name="dns_ipv6_setting">IPv6 DNS Sunucusu</string>
+    <string name="lan_bypass_title">Yerel Ağ (LAN) Bypass</string>
+    <string name="lan_bypass_summary">192.168.x.x / 10.x.x.x yerel Wi-Fi cihazlarını VPN dışı bırak</string>
+    <string name="vpn_mtu_title">Özel Tünel MTU Değeri (1280-9000)</string>
+    <string name="tun_ipv4_title">TUN Arayüz IPv4 Adresi</string>
+    <string name="tun2socks_udp_mode_title">Tun2Socks UDP Aktarım Modu</string>
+    <string name="tun2socks_stack_size_title">Tun2Socks Görev Yığın Boyutu</string>
+
+    <string name="byedpi_category">DPI Aşma Strateji Motoru</string>
+    <string name="load_isp_preset_title">Hazır İSS / Uygulama Şablonu Yükle</string>
+    <string name="load_isp_preset_summary">Superonline, Türk Telekom, TürkNet, Mobil, Discord &amp; Oyun</string>
+    <string name="use_command_line_settings">Ham Komut Satırı (CLI) Modunu Kullan</string>
+    <string name="ui_editor">Esnek Görsel Motor Editörü</string>
+    <string name="ui_editor_summary">Çoklu bölme, --auto tetikleyici, --md5sig, port filtre &amp; TLS</string>
+    <string name="command_line_editor">Komut Satırı (CLI) Editörü</string>
+    <string name="command_line_editor_summary">Doğrudan ciadpi parametreleri, hızlı ekleme &amp; geçmiş</string>
+    <string name="about_category">GkTeDPI Hakkında</string>
+    <string name="version">Sürüm</string>
+    <string name="source_code_link">GitHub Kaynak Kodu</string>
+    <string name="byedpi_readme_link">ByeDPI Çekirdek Belgeleri</string>
+
+    <string name="live_cli_preview_title">Üretilen CLI Komutu (Kopyalamak İçin Dokun)</string>
+    <string name="export_ui_to_cmd_title">Görsel Ayarları CLI Editörüne Aktar</string>
+    <string name="export_ui_to_cmd_summary">Mevcut görsel ayarları komut satırı moduna kopyalar</string>
+
+    <string name="byedpi_proxy">Soket &amp; Proxy Katmanı</string>
+    <string name="bye_dpi_proxy_ip_setting">Dinleme IP Adresi (-i)</string>
+    <string name="byedpi_proxy_port_setting">Dinleme Portu (-p)</string>
+    <string name="byedpi_conn_ip_setting">Çıkış Bağlama IP (-I / --conn-ip)</string>
+    <string name="byedpi_max_connections_setting">Maksimum Bağlantı (-c)</string>
+    <string name="byedpi_buffer_size_setting">Tampon Boyutu (-b)</string>
+    <string name="byedpi_default_ttl_setting">Özel Çıkış TTL (-g, 0=Otomatik)</string>
+    <string name="byedpi_no_domain_setting">Alan Adı Çözümlemeyi Kapat (-N)</string>
+    <string name="byedpi_no_udp_setting">UDP Desteğini Kapat (-U)</string>
+    <string name="byedpi_tcp_fast_open_setting">TCP Fast Open (-F)</string>
+    <string name="byedpi_debug_level_setting">Motor Log Seviyesi (-x)</string>
+    <string name="byedpi_sfdelay_setting">Paket Gönderim Gecikmesi ms (-w)</string>
+    <string name="byedpi_no_wait_send_setting">Gönderim Beklemeyi Kapat (-W)</string>
+
+    <string name="byedpi_auto_filter_category">Otomatik Algılama (--auto) &amp; Filtreler</string>
+    <string name="byedpi_auto_enabled_setting">--auto Tetikleme Modunu Aç</string>
+    <string name="byedpi_auto_enabled_summary">Sadece engelleme algılandığında DPI aşma uygula</string>
+    <string name="byedpi_auto_torst_setting">Zaman Aşımı / TCP RST (torst)</string>
+    <string name="byedpi_auto_redirect_setting">Sahte HTTP Yönlendirme (redirect)</string>
+    <string name="byedpi_auto_ssl_err_setting">TLS/SSL El Sıkışma Hatası (ssl_err)</string>
+    <string name="byedpi_auto_none_setting">Önceki Grup Atlandığında (none)</string>
+    <string name="byedpi_timeout_setting">Yanıt Zaman Aşımı sn (-T, örn: 2.5)</string>
+    <string name="byedpi_cache_ttl_setting">Otomatik Önbellek Süresi sn (-u)</string>
+    <string name="byedpi_port_filter_setting">Port Aralığı Filtresi (-V, örn: 443 veya 80-443)</string>
+    <string name="byedpi_hosts_mode_setting">Alan Adı Filtre Modu (-H)</string>
+    <string name="byedpi_hosts_blacklist_setting">Alan Adı Kara Listesi (boşluk/satır ayrımlı)</string>
+    <string name="byedpi_hosts_whitelist_setting">Alan Adı Beyaz Listesi (boşluk/satır ayrımlı)</string>
+
+    <string name="byedpi_desync">Paket Desync &amp; Fake Parametreleri</string>
+    <string name="byedpi_desync_method_setting">Birincil Desync Yöntemi</string>
+    <string name="byedpi_split_position_setting">Birincil Bölme Pozisyonu</string>
+    <string name="byedpi_offset_flag_setting">Birincil Konum Çapası (+s/+h/+e)</string>
+    <string name="byedpi_second_split_enabled_setting">İkincil Zincirleme Bölme Ekle</string>
+    <string name="byedpi_second_split_enabled_summary">Örn: --split 1+s ile --disorder 3+s birleştir</string>
+    <string name="byedpi_second_split_method_setting">İkincil Desync Yöntemi</string>
+    <string name="byedpi_second_split_position_setting">İkincil Bölme Pozisyonu</string>
+    <string name="byedpi_second_offset_flag_setting">İkincil Konum Çapası</string>
+    <string name="byedpi_drop_sack_setting">SACK Paketlerini Düşür (-Y)</string>
+    <string name="byedpi_fake_ttl_setting">Sahte Paket TTL Değeri (-t)</string>
+    <string name="byedpi_md5sig_setting">TCP MD5 İmza Seçeneği (-S / --md5sig)</string>
+    <string name="byedpi_md5sig_summary">Düşük TTL aramadan Linux sunucuların fake paketi reddetmesini sağlar</string>
+    <string name="byedpi_fake_offset_setting">Sahte Veri Başlangıç Kaydırması (-O)</string>
+    <string name="sni_of_fake_packet">Sahte ClientHello SNI Adresi (-n)</string>
+    <string name="byedpi_fake_data_setting">Özel Fake Paket İçeriği (-l, metin veya \\x hex)</string>
+    <string name="byedpi_ip_options_setting">Sahte IP Başlık Seçenekleri (-k)</string>
+    <string name="oob_data">Özel OOB Bayt Karakteri (-e)</string>
+
+    <string name="byedpi_protocols_category">Hedef Protokoller (-K)</string>
+    <string name="byedpi_protocols_hint">Tüm trafiğe uygulamak için hepsini seçin veya boş bırakın</string>
+    <string name="desync_http">HTTP</string>
+    <string name="desync_https">HTTPS / TLS</string>
+    <string name="desync_udp">UDP</string>
+
+    <string name="desync_http_category">HTTP Başlık Manipülasyonu (-M)</string>
+    <string name="byedpi_host_mixed_case_setting">Host Başlığı Karışık Harf (hOsT:)</string>
+    <string name="byedpi_domain_mixed_case_setting">Alan Adı Karışık Harf (NaMe)</string>
+    <string name="byedpi_host_remove_spaces_setting">Host İki Nokta Sonrası Boşluğu Sil</string>
+
+    <string name="desync_https_category">TLS Kayıt Parçalama (-r)</string>
+    <string name="byedpi_tlsrec_enabled_setting">TLS Kayıt Bölmeyi Etkinleştir</string>
+    <string name="byedpi_tlsrec_position_setting">1. TLS Kayıt Bölme Pozisyonu</string>
+    <string name="byedpi_tlsrec_at_sni_setting">1. TLS Kaydını SNI Konumuna Sabitle (+s)</string>
+    <string name="byedpi_second_tlsrec_enabled_setting">2. TLS Kayıt Bölmeyi Etkinleştir</string>
+    <string name="byedpi_second_tlsrec_position_setting">2. TLS Kayıt Bölme Pozisyonu</string>
+    <string name="byedpi_second_tlsrec_at_sni_setting">2. TLS Kaydını SNI Konumuna Sabitle (+s)</string>
+
+    <string name="desync_udp_category">UDP / QUIC Desync (-a)</string>
+    <string name="byedpi_udp_fake_count">UDP Sahte Paket Gönderim Sayısı</string>
+
+    <string name="byedpi_fallback_chain_category">Ek --auto Yedek Strateji Grubu</string>
+    <string name="byedpi_extra_auto_args_setting">Ek CLI Yedek Zinciri (örn: -A t,s -f -1 -S)</string>
+
+    <string name="command_line_arguments">Komut Satırı Argümanları</string>
+    <string name="cmd_insert_flag_title">Hızlı Parametre Ekle</string>
+    <string name="cmd_insert_flag_summary">Popüler bayrakları ekle (--disorder, --md5sig, --tlsrec...)</string>
+    <string name="cmd_history_title">Son Kullanılan Komut Geçmişi</string>
+    <string name="cmd_history_summary">Son 12 CLI komutundan birini geri yükle</string>
+
+    <string name="split_mode_disabled">Tüm Uygulamalar</string>
+    <string name="split_mode_whitelist">Sadece Seçilenler</string>
+    <string name="split_mode_blacklist">Hariç Tut</string>
+    <string name="search_apps_hint">Uygulama adı veya paket ara...</string>
+    <string name="show_system_apps">Sistem uygulamalarını göster</string>
+    <string name="clear_selection">Temizle</string>
+
+    <string name="tester_targets_label">Test edilecek hedef adresler (virgülle ayırın):</string>
+    <string name="tester_ready_hint">5 sadeleştirilmiş DPI modunu yerel SOCKS5 üzerinden dener</string>
+    <string name="tester_start">Testi Başlat</string>
+    <string name="tester_stop">Durdur</string>
+    <string name="tester_running_item">Deneniyor (%1$d/%2$d): %3$s...</string>
+    <string name="tester_done">Tamamlandı! En hızlı strateji en üstte sıralandı.</string>
+    <string name="apply_strategy">Uygula</string>
+    <string name="strategy_applied">Strateji uygulandı: %1$s</string>
+
+    <string name="export_config_json">Yedeği Dışa Aktar (.json)</string>
+    <string name="import_config_json">Yedeği İçe Aktar (.json)</string>
+    <string name="backup_exported_ok">Yapılandırma yedeği kaydedildi</string>
+    <string name="backup_imported_ok">Yedek geri yüklendi! Yenileniyor...</string>
+    <string name="backup_import_failed">Geçersiz JSON yedek dosyası</string>
+
+    <string name="new_profile_dialog_title">Profil Yöneticisi</string>
+    <string name="new_profile_hint">Profil adı girin (örn: Ev Fiber)</string>
+    <string name="create_button">Oluştur</string>
+    <string name="delete_active_profile">Aktifi Sil</string>
+    <string name="cancel_button">İptal</string>
+    <string name="preset_applied_toast">Şablon yüklendi: %1$s</string>
+    <string name="theme_switched_toast">Tema: %1$s</string>
+    <string name="settings_reloaded_toast">Tünel yeni ayarlarla yeniden başlatıldı</string>
+
+    <!-- v4.0.0 Akıllı Merkez, Oto-İSS, Shizuku, Akıllı SNI, Uygulama Tetikleyici & GkTeConnect SDK -->
+    <string name="smart_hub_title">Akıllı Merkez &amp; Köprüler</string>
+    <string name="smart_hub_short">Akıllı Merkez</string>
+    <string name="smart_hub_summary">Oto-İSS profil geçişi, Shizuku Çift-VPN, Zero-Ping SNI, Uygulama Tetikleyici &amp; SDK</string>
+
+    <string name="auto_isp_title">Ağ / Operatör Bazlı Otomatik Profil</string>
+    <string name="auto_isp_desc">Konum izni istemeden Wi-Fi ile Türk Telekom / Turkcell / Vodafone mobil veri ağlarını algılar ve atadığınız DPI stratejisine otomatik geçer.</string>
+    <string name="auto_isp_detected_fmt">Algılanan fiziksel ağ: %1$s</string>
+    <string name="auto_isp_autostart_wifi">Wi-Fi ağına geçince otomatik başlat</string>
+    <string name="auto_isp_autostart_mobile">Mobil veriye geçince otomatik başlat</string>
+
+    <string name="shizuku_bridge_title">Shizuku Çift-VPN &amp; Hotspot Köprüsü</string>
+    <string name="shizuku_bridge_desc">Android VPN yuvasını meşgul etmeden (WireGuard veya başka VPN açıkken bile) sistem proxy köprüsü kurar ya da Hotspot üzerinden PC/PS5/TV\'ye engelsiz internet dağıtır.</string>
+    <string name="shizuku_grant_btn">Shizuku İzni Ver</string>
+    <string name="shizuku_reset_proxy_btn">Sistem Proxy Sıfırla</string>
+    <string name="shizuku_start_dual_vpn">VPN İkonsuz / Çift-VPN Başlat</string>
+    <string name="shizuku_stop_dual_vpn">Çift-VPN Sistem Köprüsünü Durdur</string>
+    <string name="shizuku_state_not_installed">Shizuku yüklü değil (Hotspot/LAN paylaşımı yine kullanılabilir)</string>
+    <string name="shizuku_state_not_running">Shizuku kurulu • Önce Shizuku uygulamasından servisi başlatın</string>
+    <string name="shizuku_state_need_perm">Shizuku çalışıyor • İzin vermek için dokunun</string>
+    <string name="shizuku_state_ready_adb">Shizuku Hazır (ADB Kabuk UID 2000)</string>
+    <string name="shizuku_state_ready_root">Shizuku Hazır (Root UID 0)</string>
+    <string name="shizuku_not_running_toast">Önce Shizuku servisini başlatın</string>
+    <string name="shizuku_proxy_reset_ok">Sistem HTTP proxy ayarı temizlendi</string>
+    <string name="shizuku_dual_started_fmt">Çift-VPN köprüsü aktif (%1$s)</string>
+    <string name="shizuku_dual_stopped">Çift-VPN köprüsü durduruldu</string>
+    <string name="hotspot_share_title">Hotspot / LAN Paylaşımı (PC, PS5, TV)</string>
+
+    <string name="smart_sni_title">Akıllı SNI &amp; Zero-Ping Oyun Filtresi</string>
+    <string name="smart_sni_desc">C çekirdeğinde SNI domain ayrıştırma: Oyun ve Banka sunucularını 0 ms ek gecikmeyle doğrudan geçirir veya sadece engelli domainlerde DPI aşma uygular.</string>
+    <string name="sni_mode_off">Kapalı</string>
+    <string name="sni_mode_zero_ping">Zero-Ping Muafiyet</string>
+    <string name="sni_mode_only_blocked">Sadece Engelli</string>
+    <string name="sni_pack_gaming">Oyun Sunucuları Paketi (Valorant, CS2, Steam, Epic, PSN)</string>
+    <string name="sni_pack_banking">TR Bankalar &amp; e-Devlet Paketi (Sıfır Parçalama)</string>
+    <string name="sni_pack_discord">Discord &amp; Ses Medya Paketi</string>
+    <string name="sni_pack_social">Engelli Web &amp; Sosyal Paketi (Roblox, Wattpad, Imgur)</string>
+    <string name="sni_custom_hint">Özel domainler (boşluk veya alt satır ile, örn: ornek.com)</string>
+    <string name="sni_save_apply_btn">Özel Domainleri Kaydet &amp; Uygula</string>
+    <string name="sni_saved_toast_fmt">SNI filtresi güncellendi (%1$d aktif domain)</string>
+
+    <string name="app_trigger_title">Uygulama Bazlı Otomatik Tetikleyici</string>
+    <string name="app_trigger_desc">%0 arka plan pil tüketimli olay dinleyici (ekran yazılarını asla okumaz): seçtiğiniz uygulama açıldığında VPN\'i uyandırır, çıkınca uyutur.</string>
+    <string name="app_trigger_auth_btn">Tetikleyici Servisi Aç</string>
+    <string name="app_trigger_pick_apps_btn">Hedef Uygulamalar</string>
+    <string name="app_trigger_ready_fmt">Servis aktif • %1$d uygulama izleniyor</string>
+    <string name="app_trigger_need_service_fmt">Servis kapalı • %1$d hedef uygulama seçili</string>
+    <string name="app_trigger_enable_accessibility_hint">Erişilebilirlik ayarlarından GkTeDPI Uygulama Tetikleyici\'yi açın</string>
+    <string name="app_watcher_service_label">GkTeDPI Otomatik Uygulama Tetikleyici</string>
+    <string name="app_watcher_service_desc">Discord, Roblox veya GkteTok gibi seçtiğiniz uygulamalar açıldığında GkTeDPI tünelini otomatik başlatır. Ekran içeriğini veya metinleri asla okumaz.</string>
+
+    <string name="sdk_card_title">GkTeConnect Mini SDK</string>
+    <string name="sdk_copy_snippet_btn">GkTeDpiClient Kotlin Kodunu Kopyala</string>
+    <string name="copied_to_clipboard">Panoya kopyalandı</string>
+
+    <!-- v5.0.0+ Sunucular Bölmesi, Gerçek Çok Ülkeli VPN & Basitleştirilmiş DPI Modları -->
+    <string name="servers_card_kicker">BASİT DPI MODU</string>
+    <string name="vpn_location_kicker">GERÇEK VPN KONUMU</string>
+    <string name="servers_screen_title">Sunucular &amp; Modlar</string>
+    <string name="servers_tab_real_vpn">🌍 Gerçek VPN</string>
+    <string name="servers_tab_simple_dpi">⚡ Basit DPI</string>
+    <string name="servers_benchmark_title">En Hızlı Modu Bul</string>
+    <string name="servers_benchmark_sub">5 basit modu otomatik dene</string>
+    <string name="servers_auto_isp_short">Oto-İSS Geçişi</string>
+    <string name="servers_saved_section">KAYITLI PROFİLLERİM</string>
+    <string name="servers_presets_section">BASİT DPI MODLARI (HIZ KAYIPSIZ)</string>
+    <string name="dpi_home_clean_sub">Hız Kayıpsız Yerel Mod • DNS %1$s</string>
+    <string name="dpi_profile_clean_sub">DNS %1$s • Hız düşürmeyen yerel erişim</string>
+    <string name="vpn_connecting_fastest_sub">En hızlı sunucu seçiliyor ve bağlanılıyor...</string>
+    <string name="vpn_ready_encrypted_sub">Şifreli Gerçek VPN • IP Değiştirir</string>
+    <string name="vpn_connecting_btn">Bağlanıyor...</string>
+    <string name="vpn_exit_ip_short">IP: %1$s</string>
+    <string name="vpn_encrypted_badge">Şifreli Tünel • IP Gizler</string>
+    <string name="vpn_recommended_country_badge">ÖNERİLEN • YÜKSEK HIZ &amp; ŞİFRELİ</string>
+    <string name="vpn_add_custom_btn">+ VPN Ekle</string>
+    <string name="vpn_quick_connect_title">Hızlı Bağlan</string>
+    <string name="vpn_quick_connect_sub">En düşük pingli ülkeyi seç</string>
+    <string name="vpn_scan_pings_title">Pingleri Ölç</string>
+    <string name="vpn_scan_pings_sub">Ülke gecikmelerini canlı tara</string>
+    <string name="vpn_scanning_pings_progress">Ülkeler taranıyor...</string>
+    <string name="vpn_scan_pings_done">Güncel pingler ölçüldü</string>
+    <string name="vpn_countries_section">GERÇEK VPN ÜLKELERİ (PROTON TARZI)</string>
+    <string name="vpn_custom_servers_section">ÖZEL VPN SUNUCULARIM</string>
+    <string name="vpn_custom_server_tag">ÖZEL ŞİFRELİ SUNUCU</string>
+    <string name="vpn_add_custom_dialog_title">Özel VPN Sunucusu Ekle</string>
+    <string name="vpn_custom_name_hint">Sunucu adı (örn: Özel Hollanda)</string>
+    <string name="vpn_paste_clipboard_btn">Panodan Yapıştır</string>
+    <string name="vpn_invalid_uri_toast">Geçersiz sunucu bağlantısı (ss://, trojan://, vless://, socks5:// desteklenir)</string>
+    <string name="proxy_card_kicker">YEREL SOCKS5 BAĞLANTISI</string>
+    <string name="proxy_card_title">Proxy Portu &amp; Parametreler</string>
+
+    <string name="appearance_hub_title">Görünüm &amp; Liquid Glass</string>
+    <string name="appearance_bento_title">Görünüm</string>
+    <string name="appearance_bento_sub">Simge • Duvar Kağıdı • Tema • Cam</string>
+    <string name="smart_bento_title">Akıllı Merkez</string>
+    <string name="smart_bento_sub">Oto-İSS • SNI • Shizuku • Tetikleyici</string>
+
+    <string name="appearance_icon_title">Uygulama Simgesi</string>
+    <string name="appearance_icon_sub">Ana ekrandaki GKTE uygulama simgesini değiştir</string>
+    <string name="icon_switched_toast">Uygulama simgesi güncellendi: %1$s</string>
+
+    <string name="appearance_wallpaper_title">Arka Plan &amp; Duvar Kağıdı</string>
+    <string name="appearance_wallpaper_sub">Varsayılan tam siyah (#000000) veya özel duvar kağıdı seçin</string>
+    <string name="wallpaper_pick_gallery_btn">+ Galeri</string>
+    <string name="wallpaper_dim_label">Duvar Kağıdı Karartma</string>
+    <string name="wallpaper_applied_ok">Özel duvar kağıdı Liquid Glass arkasına uygulandı</string>
+    <string name="wallpaper_failed_toast">Seçilen görsel yüklenemedi</string>
+
+    <string name="appearance_theme_accent_title">Tema &amp; Vurgu Rengi</string>
+    <string name="appearance_optics_title">Liquid Glass Ayarları</string>
+    <string name="optics_frost_label">Cam Buzlanma Yoğunluğu</string>
+    <string name="optics_corner_label">Kart Köşe Yuvarlaklığı</string>
+    <string name="optics_haptics_label">Dokunsal Geri Bildirim (Titreşim)</string>
+
+    <string name="settings_sec_network">AĞ VE TÜNEL</string>
+    <string name="settings_sec_engine">DPI MOTORU</string>
+    <string name="settings_sec_system">API, YEDEKLEME VE SİSTEM</string>
+    <string name="settings_dns_title">DNS Sunucusu</string>
+    <string name="settings_mtu_port_title">MTU &amp; Yerel Proxy Portu</string>
+    <string name="settings_lan_bypass_title">Yerel Ağ (LAN) Muafiyeti</string>
+    <string name="settings_ipv6_title">IPv6 Yönlendirme</string>
+    <string name="settings_cli_mode_title">Komut Satırı (CLI) Modu</string>
+    <string name="settings_edit_params_title">DPI Parametrelerini Düzenle</string>
+    <string name="settings_boot_start_title">Cihaz Açılışında Otomatik Başlat</string>
+
+    <!-- v5.1.0 Yayın Sürümü: Connect Gömme Kontrolü, GitHub Oto-Güncelleme, Hakkında & Şartlar -->
+    <string name="gkte_archive_patcher_missing_msg">Cihazınızda GkTe Archive veya GkTe Patcher bulunamadı, seçtiğiniz uygulamaya Connect gömülemez</string>
+
+    <string name="ping_test_btn_idle">Bağlantıyı &amp; Pingi Test Et</string>
+    <string name="ping_test_btn_running">Erişim ölçülüyor...</string>
+    <string name="ping_test_ok_all">✓ Erişim Açık • %1$d ms</string>
+    <string name="ping_test_ok_partial">İnternet Açık • Discord Engelli (%1$d ms)</string>
+    <string name="ping_test_offline">Bağlantıya ulaşılamadı</string>
+
+    <string name="import_share_code_btn">Kod İle Ekle</string>
+    <string name="share_code_copied_toast">Profil paylaşım kodu panoya kopyalandı</string>
+    <string name="share_code_invalid_toast">Geçersiz profil paylaşım kodu</string>
+
+    <string name="settings_sec_updates_about">GÜNCELLEME VE HAKKINDA</string>
+    <string name="settings_auto_update_title">Açılışta Yeni Sürümü Kontrol Et</string>
+    <string name="settings_manual_update_title">Güncellemeleri Kontrol Et</string>
+    <string name="settings_manual_update_sub">GitHub • SametGkTe/GkTeDPI</string>
+    <string name="settings_battery_guard_title">Arka Plan Pil Koruması</string>
+    <string name="settings_battery_guard_on">Kısıtlama Yok • Aktif</string>
+    <string name="settings_battery_guard_off">Arka planda VPN uyutulmasını önlemek için dokun</string>
+    <string name="settings_about_row_title">Hakkında &amp; Kullanım Şartları</string>
+    <string name="settings_about_row_sub">Tam açıklama, gizlilik ilkeleri ve şartlar</string>
+
+    <string name="update_checking_toast">GitHub üzerinden yeni sürüm kontrol ediliyor...</string>
+    <string name="update_check_btn_short">Güncelleme Kontrolü</string>
+    <string name="update_available_title">Yeni Güncelleme Mevcut</string>
+    <string name="update_new_version_fmt">Yeni sürüm %1$s yayınlandı (Mevcut: v%2$s)</string>
+    <string name="update_default_notes">Performans iyileştirmeleri ve güncel DPI aşma stratejileri.</string>
+    <string name="update_download_install_btn">İndir ve Güncelle</string>
+    <string name="update_open_github_btn">GitHub\'da Aç</string>
+    <string name="update_later_btn">Daha Sonra</string>
+    <string name="update_downloading_title">Güncelleme İndiriliyor...</string>
+    <string name="update_download_failed">Güncelleme APK paketi indirilemedi</string>
+    <string name="update_allow_install_perm_toast">Güncellemeyi kurmak için GkTeDPI yükleme iznini onaylayın</string>
+    <string name="update_up_to_date_title">Sürümünüz Güncel</string>
+    <string name="update_up_to_date_body">GkTeDPI\'ın en güncel sürümünü (v%1$s) kullanıyorsunuz.</string>
+    <string name="update_check_failed_fmt">Güncelleme kontrol edilemedi: %1$s</string>
+
+    <string name="onboarding_welcome_title">GkTeDPI\'a Hoş Geldiniz</string>
+    <string name="onboarding_welcome_body">GkTeDPI v6 tek uygulamada iki güçlü motor sunar:\n• Basit DPI Modu: Hız ve ping kaybı olmadan %100 cihaz içi erişim.\n• Gerçek Ülke VPN\'i: Hollanda, ABD, Almanya ve 12 ülkeye şifreli tünel kurarak gerçek IP adresinizi değiştirir.\n\nDevam ederek Kullanım Şartları ve Gizlilik İlkelerini kabul etmiş olursunuz. Arka planda kesinti olmaması için pil kısıtlamasını kaldırmanız önerilir.</string>
+    <string name="onboarding_accept_btn">Kabul Et ve Başla</string>
+
+    <string name="about_screen_title">Hakkında &amp; Şartlar</string>
+    <string name="about_full_desc_heading">Uygulama Hakkında Tam Açıklama</string>
+    <string name="about_full_desc_body">GkTeDPI v6; yerel C/JNI çekirdekleri (byedpi + hev-socks5-tunnel), çok ülkeli şifreli Gerçek VPN motoru ve Optik Liquid Glass arayüz mimarisi üzerine inşa edilmiş çift motorlu bağlantı platformudur.\n\n• Gerçek Çok Ülkeli VPN (Proton Tarzı): Hollanda, ABD, Almanya, İngiltere, Fransa, Romanya, Polonya, İsveç, Finlandiya, Kanada, Japonya ve Singapur sunucularına 0-RTT paket birleştirme, şifreli DNS ve otomatik en hızlı sunucu yedeklemesiyle bağlanarak IP adresinizi değiştirir.\n\n• Basitleştirilmiş Sıfır Kayıplı DPI Modu: Karmaşık ayarlarla uğraşmadan tek dokunuşluk yalın modlarla (Otomatik, Discord &amp; Ses, Oyun Modu, Güçlü Erişim, Mobil Veri) gerçek internet hızınızı ve oyun pinginizi koruyarak engelleri aşar.</string>
+    <string name="about_terms_heading">Kullanım Şartları ve Gizlilik İlkeleri</string>
+    <string name="about_terms_body">1. Sıfır Kayıt (Zero-Log) ve Gizlilik: GkTeDPI ziyaret ettiğiniz siteleri, trafik içeriklerinizi veya DNS geçmişinizi kaydetmez ve üçüncü taraflarla paylaşmaz.\n\n2. Çift Motor Kapsamı: Basit DPI Modu\'nda paketler yerel olarak işlenir ve IP adresiniz değişmez. Gerçek VPN Modu\'nda ise trafiğiniz ve DNS sorgularınız şifrelenerek seçtiğiniz ülkedeki çıkış sunucusu üzerinden yönlendirilir ve kamuya açık IP adresiniz değişir.\n\n3. Yasal Kullanım Sorumluluğu: Uygulamanın yürürlükteki yerel mevzuata ve ağ kullanım kurallarına uygun biçimde kullanılması tamamen kullanıcının kendi sorumluluğundadır.\n\n4. Sorumluluk Reddi ve Açık Kaynak Bileşenler: Bu yazılım herhangi bir açık veya zımni garanti olmaksızın \"OLDUĞU GİBİ\" (AS-IS) sunulmaktadır. Çekirdek katmanda açık kaynaklı byedpi ve hev-socks5-tunnel kütüphaneleri kendi lisans koşullarına uygun olarak kullanılmaktadır.</string>
+    <string name="fatih_stealth_title">🏫 FATİH / Okul Engel Aşma (Stealth 443)</string>
+    <string name="fatih_stealth_sub_off">JumpJump / X-VPN tarzı Port 443 HTTPS gizleme + 3 parçalı TLS SNI + CDN köprüsü</string>
+    <string name="fatih_stealth_sub_on">AKTİF • Port 443 HTTPS Gizleme + Parçalı TLS SNI + Şifreli DoH + CDN</string>
+    <string name="fatih_stealth_home_pill_off">🏫 FATİH / Okul Engel Aşma: KAPALI</string>
+    <string name="fatih_stealth_home_pill_on">🏫 FATİH / Okul Engel Aşma: AKTİF (Port 443)</string>
+    <string name="fatih_stealth_enabled_toast">🏫 FATİH / Okul Engel Aşma (Port 443 Stealth) açıldı</string>
+    <string name="fatih_stealth_disabled_toast">Standart yüksek hızlı VPN moduna dönüldü</string>
+</resources>

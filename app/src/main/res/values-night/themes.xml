@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.GkTeDPI" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/glass_bg_base</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="android:windowBackground">@color/glass_bg_base</item>
+        <item name="android:colorBackground">@color/glass_bg_base</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:fontFamily">@font/modern_sans</item>
+        <item name="fontFamily">@font/modern_sans</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="alertDialogTheme">@style/Theme.GkTeDPI.Dialog</item>
+        <item name="materialAlertDialogTheme">@style/Theme.GkTeDPI.Dialog</item>
+    </style>
+</resources>

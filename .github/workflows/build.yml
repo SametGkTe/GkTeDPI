@@ -1,0 +1,74 @@
+name: GkTeDPI Android CI Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    name: Build GkTeDPI APKs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GkTeDPI with Submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Android SDK & NDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install NDK 26.1 & CMake 3.22.1
+        run: |
+          yes | sdkmanager --licenses > /dev/null || true
+          sdkmanager "platforms;android-34" "build-tools;34.0.0" "ndk;26.1.10909125" "cmake;3.22.1"
+
+      - name: Setup Gradle Cache
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Grant Execute Permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Decode Release Keystore (Optional)
+        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > "${RUNNER_TEMP}/release.jks"
+          echo "KEYSTORE_PATH=${RUNNER_TEMP}/release.jks" >> $GITHUB_ENV
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Run Unit Tests
+        run: ./gradlew testDebugUnitTest --no-daemon
+
+      - name: Build Universal & Per-ABI Release APKs
+        env:
+          SPLIT_APK: "true"
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          ./gradlew assembleRelease --no-daemon
+          mkdir -p dist-apks
+          for apk in app/build/outputs/apk/release/*.apk; do
+            base=$(basename "$apk" | sed 's/app-/GkTeDPI-v2.0.0-/')
+            cp "$apk" "dist-apks/$base"
+          done
+          cd dist-apks && sha256sum *.apk > SHA256SUMS.txt
+
+      - name: Upload GkTeDPI APK Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: GkTeDPI-APKs
+          path: dist-apks/*
+          retention-days: 30

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appearanceRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/glass_bg_base">
+
+    <com.sametgkte.gktedpi.ui.LiquidAmbientBackgroundView
+        android:id="@+id/appearanceAmbientBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/appearanceContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- TOP HEADER -->
+        <LinearLayout
+            android:id="@+id/appearanceHeaderCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_liquid_glass_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/appearanceBackBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_liquid_glass_pill"
+                android:fontFamily="@font/pjs_bold"
+                android:paddingStart="13dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="7dp"
+                android:text="@string/back"
+                android:textColor="@color/text_primary"
+                android:textSize="12.5sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/pjs_extrabold"
+                android:text="@string/appearance_hub_title"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="28dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 1. APP LAUNCHER ICON CARD -->
+                <LinearLayout
+                    android:id="@+id/cardAppIcons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:text="@string/appearance_icon_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15.5sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/pjs_medium"
+                        android:text="@string/appearance_icon_sub"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/iconVariantsRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4" />
+                </LinearLayout>
+
+                <!-- 2. WALLPAPER & FULL BLACK BACKDROP CARD -->
+                <LinearLayout
+                    android:id="@+id/cardWallpapers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_extrabold"
+                                android:text="@string/appearance_wallpaper_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="15.5sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/pjs_medium"
+                                android:text="@string/appearance_wallpaper_sub"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/btnPickGalleryWallpaper"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_liquid_glass_pill_active"
+                            android:fontFamily="@font/pjs_bold"
+                            android:paddingStart="12dp"
+                            android:paddingTop="7dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="7dp"
+                            android:text="@string/wallpaper_pick_gallery_btn"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="11.5sp" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/wallpaperPillsRow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/pjs_bold"
+                        android:text="@string/wallpaper_dim_label"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/wallpaperDimRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <!-- 3. THEME & ACCENT COLOR CARD -->
+                <LinearLayout
+                    android:id="@+id/cardThemeAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:text="@string/appearance_theme_accent_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15.5sp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/themePillsRow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:fontFamily="@font/pjs_bold"
+                        android:text="@string/personalization_accent_label"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/accentSwatchesRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <!-- 4. LIQUID GLASS OPTICAL CALIBRATION CARD -->
+                <LinearLayout
+                    android:id="@+id/cardLiquidOptics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:text="@string/appearance_optics_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15.5sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/pjs_bold"
+                        android:text="@string/optics_frost_label"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/frostOptionsRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/pjs_bold"
+                        android:text="@string/optics_corner_label"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/cornerRadiusRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_medium"
+                            android:text="@string/refraction_prism"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchPrismRefraction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_medium"
+                            android:text="@string/optics_haptics_label"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchHaptics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 5. HOME SCREEN WIDGETS CARD -->
+                <LinearLayout
+                    android:id="@+id/cardWidgets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:text="@string/pin_widget_dialog_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15.5sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/btnPinCompactWidget"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_liquid_glass_pill_active"
+                            android:fontFamily="@font/pjs_bold"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="2×2 Kompakt"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/btnPinControlWidget"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_liquid_glass_pill_active"
+                            android:fontFamily="@font/pjs_bold"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="4×2 Kontrol"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

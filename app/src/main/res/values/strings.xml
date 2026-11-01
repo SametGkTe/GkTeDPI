@@ -1,0 +1,432 @@
+<resources>
+    <string name="byedpi_docs" translatable="false">https://github.com/hufrea/byedpi/blob/v0.13/README.md</string>
+    <string name="app_name" translatable="false">GkTeDPI</string>
+    <string name="liquid_engine_subtitle">AMOLED DPI Engine</string>
+
+    <string name="tab_home">Ana Sayfa</string>
+    <string name="tab_utilities">Utilities</string>
+    <string name="tab_settings">Ayarlar</string>
+
+    <string name="vpn_and_dpi_modes_title">VPN &amp; DPI MODES</string>
+    <string name="vpn_mode_row_label">Connection Mode</string>
+    <string name="dpi_mode_row_label">DPI Bypass Mode</string>
+    <string name="mode_btn_real_vpn">🌍 Real VPN</string>
+    <string name="mode_btn_vpn">⚡ DPI Mode</string>
+    <string name="mode_btn_proxy">🔌 Proxy</string>
+    <string name="copy_short">Copy</string>
+
+    <string name="gkte_connect_tool_title" translatable="false">GkTe Connect Tool</string>
+    <string name="gkte_connect_tool_subtitle">Integrated GkTe Ecosystem Modules</string>
+    <string name="utility_nectarlink_desc">Phone &amp; PC Encrypted Sync</string>
+    <string name="utility_lmplayground_desc">On-Device Local LLM Engine</string>
+    <string name="utility_shizuku_desc">System API Bridge</string>
+
+    <string name="tester_short_btn">Strategy Test</string>
+    <string name="logs_short_btn">Logs &amp; JSON</string>
+
+    <!-- Personalization, Widgets & External API Gateway -->
+    <string name="personalization_title">Personalization &amp; Liquid Glass</string>
+    <string name="personalization_theme_label">Theme</string>
+    <string name="personalization_accent_label">Glass Accent</string>
+    <string name="personalization_frost_label">Frost &amp; Refraction</string>
+    <string name="frost_clear">Clear</string>
+    <string name="frost_balanced">Balanced</string>
+    <string name="frost_heavy">Frosted</string>
+    <string name="refraction_prism">Prismatic</string>
+    <string name="liquid_motion_bg">Liquid Mesh</string>
+    <string name="pin_widget_btn">+ Add Widget</string>
+    <string name="pin_widget_dialog_title">Add Liquid Glass Widget</string>
+    <string name="widget_compact_name">GkTeDPI Compact (2x2)</string>
+    <string name="widget_compact_desc">Quick 1-tap Liquid Glass VPN toggle</string>
+    <string name="widget_control_name">GkTeDPI Control Panel (4x2)</string>
+    <string name="widget_control_desc">Live status, profile switcher &amp; VPN control</string>
+    <string name="widget_switch_profile">Switch Profile</string>
+    <string name="widget_pin_unsupported">Long-press your Home Screen &gt; Widgets to add GkTeDPI</string>
+
+    <string name="external_api_category">Inter-App VPN API Gateway</string>
+    <string name="external_api_enable_title">Allow External App Control</string>
+    <string name="external_api_enable_summary">Let ecosystem apps (GkteTok, NectarLink, automation) start/stop VPN</string>
+    <string name="external_api_require_token_title">Require API Security Token</string>
+    <string name="external_api_require_token_summary">Require matching api_token extra for external requests</string>
+    <string name="external_api_docs_title">API Integration Code &amp; Token</string>
+    <string name="external_api_docs_summary">View &amp; copy Kotlin Intent, ContentProvider &amp; gktedpi:// URI guide</string>
+    <string name="external_api_copied">API integration code copied</string>
+    <string name="external_api_new_token">New Token</string>
+
+    <string name="vpn_connect">Connect</string>
+    <string name="vpn_disconnect">Disconnect</string>
+    <string name="vpn_connected">Connected • Protected</string>
+    <string name="vpn_disconnected">Ready • Disconnected</string>
+    <string name="proxy_up">SOCKS5 Proxy Active</string>
+    <string name="proxy_down">SOCKS5 Proxy Stopped</string>
+    <string name="proxy_start">Start Proxy</string>
+    <string name="proxy_stop">Stop Proxy</string>
+
+    <string name="settings">Settings</string>
+    <string name="title_settings">GkTeDPI Settings</string>
+    <string name="back">Back</string>
+    <string name="refresh">Refresh</string>
+    <string name="save_logs">Save .log</string>
+    <string name="reset_settings">Reset</string>
+    <string name="logs_failed">Failed to collect logs</string>
+    <string name="vpn_permission_denied">VPN permission denied</string>
+    <string name="failed_to_start">Failed to start %1$s</string>
+    <string name="invalid_preference_value">Invalid value for %1$s: %2$s</string>
+
+    <string name="download_label">DOWNLOAD</string>
+    <string name="upload_label">UPLOAD</string>
+    <string name="endpoint_summary">%1$s:%2$s • DNS %3$s</string>
+
+    <string name="active_profile_label">ACTIVE PROFILE</string>
+    <string name="presets_button">ISP Presets</string>
+    <string name="manage_profiles_button">+ Profile</string>
+    <string name="copy_command">Copy command</string>
+    <string name="command_copied">CLI command copied to clipboard</string>
+
+    <string name="flexible_engine_title">Engine &amp; Network</string>
+    <string name="flexible_engine_desc">Desync, DNS, MTU, LAN bypass &amp; CLI</string>
+    <string name="split_tunnel_title">Split Tunneling</string>
+    <string name="split_tunnel_desc">All apps tunneled</string>
+    <string name="split_tunnel_whitelist_count">Whitelist • %1$d apps</string>
+    <string name="split_tunnel_blacklist_count">Bypassed • %1$d apps</string>
+    <string name="strategy_tester_title">Auto Strategy Test</string>
+    <string name="strategy_tester_desc">Benchmark &amp; pick fastest bypass</string>
+    <string name="logs_backup_title">Logs &amp; Backup</string>
+    <string name="logs_backup_desc">Live Logcat &amp; JSON Export/Import</string>
+
+    <string name="vpn_channel_name">GkTeDPI VPN Tunnel</string>
+    <string name="proxy_channel_name">GkTeDPI SOCKS5 Proxy</string>
+    <string name="notification_title">GkTeDPI Active</string>
+    <string name="vpn_notification_active_profile">%1$s • Tunnel protecting traffic</string>
+    <string name="notification_stop">Stop</string>
+    <string name="notification_restart">Reload</string>
+
+    <string name="general_category">Appearance &amp; Automation</string>
+    <string name="theme_settings">Liquid Glass Theme</string>
+    <string name="mode_setting">Operating Mode</string>
+    <string name="auto_start_boot_title">Start on Device Boot</string>
+    <string name="auto_start_boot_summary">Automatically connect GkTeDPI when phone restarts</string>
+    <string name="auto_connect_launch_title">Auto-Connect on Launch</string>
+    <string name="auto_connect_launch_summary">Connect immediately when opening GkTeDPI</string>
+    <string name="live_notification_stats_title">Live Speed in Notification</string>
+    <string name="live_notification_stats_summary">Display real-time upload and download speed</string>
+
+    <string name="vpn_network_category">Advanced VPN, DNS &amp; Routing</string>
+    <string name="dns_preset_title">Quick DNS Provider</string>
+    <string name="dbs_ip_setting">Primary DNS (IPv4)</string>
+    <string name="dns_ip_secondary_setting">Secondary / Fallback DNS</string>
+    <string name="ipv6_setting">Enable IPv6 Routing</string>
+    <string name="dns_ipv6_setting">IPv6 DNS Server</string>
+    <string name="lan_bypass_title">Bypass Local Network (LAN)</string>
+    <string name="lan_bypass_summary">Exclude 192.168.x.x / 10.x.x.x local Wi-Fi devices</string>
+    <string name="vpn_mtu_title">Custom Tunnel MTU (1280-9000)</string>
+    <string name="tun_ipv4_title">TUN Interface IPv4 Address</string>
+    <string name="tun2socks_udp_mode_title">Tun2Socks UDP Relay Mode</string>
+    <string name="tun2socks_stack_size_title">Tun2Socks Task Stack Size</string>
+
+    <string name="byedpi_category">DPI Bypass Strategy Engine</string>
+    <string name="load_isp_preset_title">Load Built-in ISP / App Preset</string>
+    <string name="load_isp_preset_summary">Ready templates for TR ISPs, Discord, Gaming &amp; Auto</string>
+    <string name="use_command_line_settings">Use Raw Command Line Mode</string>
+    <string name="ui_editor">Flexible Visual Engine Editor</string>
+    <string name="ui_editor_summary">Configure multi-split, --auto triggers, --md5sig, ports &amp; TLS</string>
+    <string name="command_line_editor">Command Line (CLI) Editor</string>
+    <string name="command_line_editor_summary">Direct ciadpi flags, quick chips &amp; history</string>
+    <string name="about_category">About GkTeDPI</string>
+    <string name="version">Version</string>
+    <string name="source_code_link">GitHub Repository</string>
+    <string name="byedpi_readme_link">ByeDPI Core Documentation</string>
+
+    <string name="live_cli_preview_title">Generated CLI Command (Tap to Copy)</string>
+    <string name="export_ui_to_cmd_title">Transfer UI Settings to CLI Editor</string>
+    <string name="export_ui_to_cmd_summary">Copies current visual flags into Command Line Mode</string>
+
+    <string name="byedpi_proxy">Socket &amp; Proxy Engine</string>
+    <string name="bye_dpi_proxy_ip_setting">Listen IP (-i)</string>
+    <string name="byedpi_proxy_port_setting">Listen Port (-p)</string>
+    <string name="byedpi_conn_ip_setting">Outbound Bind IP (-I / --conn-ip)</string>
+    <string name="byedpi_max_connections_setting">Max Connections (-c)</string>
+    <string name="byedpi_buffer_size_setting">Buffer Size (-b)</string>
+    <string name="byedpi_default_ttl_setting">Custom Outgoing TTL (-g, 0=Auto)</string>
+    <string name="byedpi_no_domain_setting">Reject Domain Resolution (-N)</string>
+    <string name="byedpi_no_udp_setting">Disable UDP Association (-U)</string>
+    <string name="byedpi_tcp_fast_open_setting">TCP Fast Open (-F)</string>
+    <string name="byedpi_debug_level_setting">Engine Debug Level (-x)</string>
+    <string name="byedpi_sfdelay_setting">Packet Send Delay ms (-w)</string>
+    <string name="byedpi_no_wait_send_setting">Disable Send Wait (-W)</string>
+
+    <string name="byedpi_auto_filter_category">Auto-Detection (--auto) &amp; Filters</string>
+    <string name="byedpi_auto_enabled_setting">Enable --auto Trigger Mode</string>
+    <string name="byedpi_auto_enabled_summary">Trigger desync only when DPI block is detected</string>
+    <string name="byedpi_auto_torst_setting">Trigger on Timeout / TCP RST (torst)</string>
+    <string name="byedpi_auto_redirect_setting">Trigger on HTTP Redirect (redirect)</string>
+    <string name="byedpi_auto_ssl_err_setting">Trigger on TLS/SSL Alert (ssl_err)</string>
+    <string name="byedpi_auto_none_setting">Trigger on Skipped Group (none)</string>
+    <string name="byedpi_timeout_setting">Response Timeout sec (-T, e.g. 2.5)</string>
+    <string name="byedpi_cache_ttl_setting">Auto Cache Lifetime sec (-u)</string>
+    <string name="byedpi_port_filter_setting">Port Range Filter (-V, e.g. 443 or 80-443)</string>
+    <string name="byedpi_hosts_mode_setting">Domain Filter Mode (-H)</string>
+    <string name="byedpi_hosts_blacklist_setting">Domain Blacklist (space/newline separated)</string>
+    <string name="byedpi_hosts_whitelist_setting">Domain Whitelist (space/newline separated)</string>
+
+    <string name="byedpi_desync">Packet Desync &amp; Fake Parameters</string>
+    <string name="byedpi_desync_method_setting">Primary Desync Method</string>
+    <string name="byedpi_split_position_setting">Primary Split Position</string>
+    <string name="byedpi_offset_flag_setting">Primary Offset Anchor (+s/+h/+e)</string>
+    <string name="byedpi_second_split_enabled_setting">Chain Secondary Split/Desync Step</string>
+    <string name="byedpi_second_split_enabled_summary">Combine e.g. --split 1+s with --disorder 3+s</string>
+    <string name="byedpi_second_split_method_setting">Secondary Desync Method</string>
+    <string name="byedpi_second_split_position_setting">Secondary Split Position</string>
+    <string name="byedpi_second_offset_flag_setting">Secondary Offset Anchor</string>
+    <string name="byedpi_drop_sack_setting">Drop SACK Packets (-Y)</string>
+    <string name="byedpi_fake_ttl_setting">Fake Packet TTL (-t)</string>
+    <string name="byedpi_md5sig_setting">TCP MD5 Signature Option (-S / --md5sig)</string>
+    <string name="byedpi_md5sig_summary">Drops fake packets on Linux servers without low TTL guesswork</string>
+    <string name="byedpi_fake_offset_setting">Fake Data Start Offset (-O)</string>
+    <string name="sni_of_fake_packet">Fake ClientHello SNI (-n)</string>
+    <string name="byedpi_fake_data_setting">Custom Fake Payload (-l, text or \\x hex)</string>
+    <string name="byedpi_ip_options_setting">Fake IP Header Options (-k)</string>
+    <string name="oob_data">Custom OOB Byte (-e)</string>
+
+    <string name="byedpi_protocols_category">Target Protocols (-K)</string>
+    <string name="byedpi_protocols_hint">Uncheck all or check all to process every protocol</string>
+    <string name="desync_http">HTTP</string>
+    <string name="desync_https">HTTPS / TLS</string>
+    <string name="desync_udp">UDP</string>
+
+    <string name="desync_http_category">HTTP Header Manipulation (-M)</string>
+    <string name="byedpi_host_mixed_case_setting">Mix Host Header Case (hOsT:)</string>
+    <string name="byedpi_domain_mixed_case_setting">Mix Domain Name Case (NaMe)</string>
+    <string name="byedpi_host_remove_spaces_setting">Remove Space After Host Colon</string>
+
+    <string name="desync_https_category">TLS Record Fragmentation (-r)</string>
+    <string name="byedpi_tlsrec_enabled_setting">Enable TLS Record Split</string>
+    <string name="byedpi_tlsrec_position_setting">TLS Record Position 1</string>
+    <string name="byedpi_tlsrec_at_sni_setting">Anchor TLS Record 1 at SNI (+s)</string>
+    <string name="byedpi_second_tlsrec_enabled_setting">Enable Second TLS Record Split</string>
+    <string name="byedpi_second_tlsrec_position_setting">TLS Record Position 2</string>
+    <string name="byedpi_second_tlsrec_at_sni_setting">Anchor TLS Record 2 at SNI (+s)</string>
+
+    <string name="desync_udp_category">UDP / QUIC Desync (-a)</string>
+    <string name="byedpi_udp_fake_count">UDP Fake Packet Burst Count</string>
+
+    <string name="byedpi_fallback_chain_category">Extra --auto Fallback Group</string>
+    <string name="byedpi_extra_auto_args_setting">Appended CLI Fallback Chain (e.g. -A t,s -f -1 -S)</string>
+
+    <string name="command_line_arguments">Command Line Arguments</string>
+    <string name="cmd_insert_flag_title">Quick Insert Parameter Flag</string>
+    <string name="cmd_insert_flag_summary">Append popular flags (--disorder, --md5sig, --tlsrec...)</string>
+    <string name="cmd_history_title">Recent Command History</string>
+    <string name="cmd_history_summary">Restore one of your last 12 used CLI commands</string>
+
+    <string name="split_mode_disabled">All Apps</string>
+    <string name="split_mode_whitelist">Only Selected</string>
+    <string name="split_mode_blacklist">Exclude</string>
+    <string name="search_apps_hint">Search app name or package...</string>
+    <string name="show_system_apps">Show system apps</string>
+    <string name="clear_selection">Clear</string>
+
+    <string name="tester_targets_label">Target URLs to verify (comma separated):</string>
+    <string name="tester_ready_hint">Tests 5 simplified DPI bypass modes via local SOCKS5</string>
+    <string name="tester_start">Start Test</string>
+    <string name="tester_stop">Stop</string>
+    <string name="tester_running_item">Testing %1$d/%2$d: %3$s...</string>
+    <string name="tester_done">Completed! Best strategy is at the top.</string>
+    <string name="apply_strategy">Apply</string>
+    <string name="strategy_applied">Applied strategy: %1$s</string>
+
+    <string name="export_config_json">Export Backup (.json)</string>
+    <string name="import_config_json">Import Backup (.json)</string>
+    <string name="backup_exported_ok">Configuration backup exported</string>
+    <string name="backup_imported_ok">Configuration restored! Reloading...</string>
+    <string name="backup_import_failed">Invalid backup JSON file</string>
+
+    <string name="new_profile_dialog_title">Profile Manager</string>
+    <string name="new_profile_hint">Enter profile name (e.g. Home Fiber)</string>
+    <string name="create_button">Create</string>
+    <string name="delete_active_profile">Delete Active</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="preset_applied_toast">Preset loaded: %1$s</string>
+    <string name="theme_switched_toast">Theme: %1$s</string>
+    <string name="settings_reloaded_toast">Tunnel reloaded with new settings</string>
+
+    <!-- v4.0.0 Smart Hub, Auto-ISP, Shizuku, Smart SNI, App Watcher & GkTeConnect SDK -->
+    <string name="smart_hub_title">Smart Center &amp; Bridges</string>
+    <string name="smart_hub_short">Smart Center</string>
+    <string name="smart_hub_summary">Auto-ISP switch, Shizuku Dual-VPN, Zero-Ping SNI, App Trigger &amp; SDK</string>
+
+    <string name="auto_isp_title">Auto-ISP &amp; Network Profile Switch</string>
+    <string name="auto_isp_desc">Detects Wi-Fi vs Turk Telekom / Turkcell / Vodafone mobile data without location permission and switches DPI strategy automatically.</string>
+    <string name="auto_isp_detected_fmt">Active physical network: %1$s</string>
+    <string name="auto_isp_autostart_wifi">Auto-connect when joining Wi-Fi</string>
+    <string name="auto_isp_autostart_mobile">Auto-connect on Mobile Data</string>
+
+    <string name="shizuku_bridge_title">Shizuku Dual-VPN &amp; Hotspot Bridge</string>
+    <string name="shizuku_bridge_desc">Run DPI bypass without occupying Android\'s VPN slot (works alongside WireGuard/other VPNs) or share DPI-free internet over Hotspot.</string>
+    <string name="shizuku_grant_btn">Grant Shizuku</string>
+    <string name="shizuku_reset_proxy_btn">Reset System Proxy</string>
+    <string name="shizuku_start_dual_vpn">Start VPN-Iconless / Dual-VPN Mode</string>
+    <string name="shizuku_stop_dual_vpn">Stop Dual-VPN System Proxy</string>
+    <string name="shizuku_state_not_installed">Shizuku not installed (Hotspot/LAN bridge still available)</string>
+    <string name="shizuku_state_not_running">Shizuku installed • Start service inside Shizuku app</string>
+    <string name="shizuku_state_need_perm">Shizuku running • Tap Grant Shizuku</string>
+    <string name="shizuku_state_ready_adb">Shizuku Ready (ADB Shell UID 2000)</string>
+    <string name="shizuku_state_ready_root">Shizuku Ready (Root UID 0)</string>
+    <string name="shizuku_not_running_toast">Start Shizuku service first</string>
+    <string name="shizuku_proxy_reset_ok">System HTTP proxy cleared</string>
+    <string name="shizuku_dual_started_fmt">Dual-VPN bridge active on %1$s</string>
+    <string name="shizuku_dual_stopped">Dual-VPN bridge stopped</string>
+    <string name="hotspot_share_title">Hotspot / LAN Share (PC, PS5, TV)</string>
+
+    <string name="smart_sni_title">Smart SNI &amp; Zero-Ping Gaming Split</string>
+    <string name="smart_sni_desc">C-level packet SNI host filter: pass Gaming &amp; Banking traffic with 0ms added latency, or apply DPI desync exclusively to blocked domains.</string>
+    <string name="sni_mode_off">Disabled</string>
+    <string name="sni_mode_zero_ping">Zero-Ping Bypass</string>
+    <string name="sni_mode_only_blocked">Only Blocked</string>
+    <string name="sni_pack_gaming">Gaming Servers Pack (Riot, Steam, CS2, Epic, PSN)</string>
+    <string name="sni_pack_banking">TR Banking &amp; e-Devlet Pack (0-Desync Safe)</string>
+    <string name="sni_pack_discord">Discord &amp; Voice Media Pack</string>
+    <string name="sni_pack_social">Blocked Web &amp; Social Pack (Roblox, Wattpad, Imgur)</string>
+    <string name="sni_custom_hint">Extra domains (space or newline separated, e.g. example.com)</string>
+    <string name="sni_save_apply_btn">Save Custom Domains &amp; Reload</string>
+    <string name="sni_saved_toast_fmt">SNI filter updated (%1$d active domains)</string>
+
+    <string name="app_trigger_title">App-Based Auto Trigger (App Watcher)</string>
+    <string name="app_trigger_desc">Event-driven watcher (0% idle CPU, never reads screen content): wakes VPN when a target app opens and auto-sleeps when closed.</string>
+    <string name="app_trigger_auth_btn">Enable Watcher Service</string>
+    <string name="app_trigger_pick_apps_btn">Target Apps</string>
+    <string name="app_trigger_ready_fmt">Service active • Watching %1$d apps</string>
+    <string name="app_trigger_need_service_fmt">Service inactive • %1$d target apps selected</string>
+    <string name="app_trigger_enable_accessibility_hint">Enable GkTeDPI Watcher in Accessibility settings</string>
+    <string name="app_watcher_service_label">GkTeDPI Auto App Trigger</string>
+    <string name="app_watcher_service_desc">Starts GkTeDPI automatically when your selected apps (such as Discord or Roblox) open. Never reads screen text or content.</string>
+
+    <string name="sdk_card_title">GkTeConnect Mini SDK</string>
+    <string name="sdk_copy_snippet_btn">Copy GkTeDpiClient Kotlin Integration Code</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+
+    <!-- v5.0.0+ Servers Compartment, Real Multi-Country VPN & Simplified DPI Modes -->
+    <string name="servers_card_kicker">SIMPLE DPI MODE</string>
+    <string name="vpn_location_kicker">REAL VPN LOCATION</string>
+    <string name="servers_screen_title">Servers &amp; Modes</string>
+    <string name="servers_tab_real_vpn">🌍 Country VPN</string>
+    <string name="servers_tab_simple_dpi">⚡ Simple DPI</string>
+    <string name="servers_benchmark_title">Auto Best Mode</string>
+    <string name="servers_benchmark_sub">Benchmark 5 simple modes</string>
+    <string name="servers_auto_isp_short">Auto-ISP Switch</string>
+    <string name="servers_saved_section">MY SAVED PROFILES</string>
+    <string name="servers_presets_section">SIMPLE DPI MODES (ZERO SPEED LOSS)</string>
+    <string name="dpi_home_clean_sub">Zero Speed Loss • DNS %1$s</string>
+    <string name="dpi_profile_clean_sub">DNS %1$s • Zero speed loss local bypass</string>
+    <string name="vpn_connecting_fastest_sub">Selecting fastest node &amp; connecting...</string>
+    <string name="vpn_ready_encrypted_sub">Encrypted Real VPN • Changes IP</string>
+    <string name="vpn_connecting_btn">Connecting...</string>
+    <string name="vpn_exit_ip_short">IP: %1$s</string>
+    <string name="vpn_encrypted_badge">Encrypted Tunnel • Hides IP</string>
+    <string name="vpn_recommended_country_badge">RECOMMENDED • HIGH SPEED &amp; ENCRYPTED</string>
+    <string name="vpn_add_custom_btn">+ Add VPN</string>
+    <string name="vpn_quick_connect_title">Quick Connect</string>
+    <string name="vpn_quick_connect_sub">Pick lowest-ping country</string>
+    <string name="vpn_scan_pings_title">Measure Pings</string>
+    <string name="vpn_scan_pings_sub">Live scan country latencies</string>
+    <string name="vpn_scanning_pings_progress">Scanning countries...</string>
+    <string name="vpn_scan_pings_done">Country pings updated</string>
+    <string name="vpn_countries_section">REAL VPN COUNTRIES (ENCRYPTED)</string>
+    <string name="vpn_custom_servers_section">MY CUSTOM VPN SERVERS</string>
+    <string name="vpn_custom_server_tag">CUSTOM ENCRYPTED SERVER</string>
+    <string name="vpn_add_custom_dialog_title">Add Custom VPN Server</string>
+    <string name="vpn_custom_name_hint">Server name (e.g. Private NL)</string>
+    <string name="vpn_paste_clipboard_btn">Paste Clipboard</string>
+    <string name="vpn_invalid_uri_toast">Invalid server URI (supports ss://, trojan://, vless://, socks5://)</string>
+    <string name="proxy_card_kicker">LOCAL SOCKS5 ENDPOINT</string>
+    <string name="proxy_card_title">Proxy Port &amp; CLI Parameters</string>
+
+    <string name="appearance_hub_title">Appearance &amp; Liquid Glass</string>
+    <string name="appearance_bento_title">Appearance</string>
+    <string name="appearance_bento_sub">Icon • Wallpaper • Theme • Glass</string>
+    <string name="smart_bento_title">Smart Center</string>
+    <string name="smart_bento_sub">Auto-ISP • SNI • Shizuku • Trigger</string>
+
+    <string name="appearance_icon_title">App Icon</string>
+    <string name="appearance_icon_sub">Switch your home screen GKTE launcher icon</string>
+    <string name="icon_switched_toast">App icon updated: %1$s</string>
+
+    <string name="appearance_wallpaper_title">Backdrop &amp; Wallpaper</string>
+    <string name="appearance_wallpaper_sub">Pure #000000 black by default, or set a custom wallpaper</string>
+    <string name="wallpaper_pick_gallery_btn">+ Gallery</string>
+    <string name="wallpaper_dim_label">Wallpaper Dimming</string>
+    <string name="wallpaper_applied_ok">Custom wallpaper applied behind Liquid Glass</string>
+    <string name="wallpaper_failed_toast">Could not load selected image</string>
+
+    <string name="appearance_theme_accent_title">Theme &amp; Accent Color</string>
+    <string name="appearance_optics_title">Liquid Glass Optics</string>
+    <string name="optics_frost_label">Glass Frost Density</string>
+    <string name="optics_corner_label">Card Corner Radius</string>
+    <string name="optics_haptics_label">Tactile Haptic Feedback</string>
+
+    <string name="settings_sec_network">NETWORK &amp; TUNNEL</string>
+    <string name="settings_sec_engine">DPI ENGINE</string>
+    <string name="settings_sec_system">API, BACKUP &amp; SYSTEM</string>
+    <string name="settings_dns_title">DNS Server</string>
+    <string name="settings_mtu_port_title">MTU &amp; Local Proxy Port</string>
+    <string name="settings_lan_bypass_title">LAN / Local Network Bypass</string>
+    <string name="settings_ipv6_title">IPv6 Routing</string>
+    <string name="settings_cli_mode_title">Command-Line (CLI) Mode</string>
+    <string name="settings_edit_params_title">Edit DPI Parameters</string>
+    <string name="settings_boot_start_title">Start Automatically on Boot</string>
+
+    <!-- v5.1.0 Publication Edition: Connect Embed Check, GitHub Self-Updater, About & Terms, Extras -->
+    <string name="gkte_archive_patcher_missing_msg">Cihazınızda GkTe Archive veya GkTe Patcher bulunamadı, seçtiğiniz uygulamaya Connect gömülemez</string>
+
+    <string name="ping_test_btn_idle">Test Connection &amp; Ping</string>
+    <string name="ping_test_btn_running">Testing access...</string>
+    <string name="ping_test_ok_all">✓ Open Access • %1$d ms</string>
+    <string name="ping_test_ok_partial">Internet Open • Discord Blocked (%1$d ms)</string>
+    <string name="ping_test_offline">Connection unreachable</string>
+
+    <string name="import_share_code_btn">Import Code</string>
+    <string name="share_code_copied_toast">Profile share code copied to clipboard</string>
+    <string name="share_code_invalid_toast">Invalid profile share code</string>
+
+    <string name="settings_sec_updates_about">UPDATES &amp; ABOUT</string>
+    <string name="settings_auto_update_title">Check GitHub Updates on Launch</string>
+    <string name="settings_manual_update_title">Check for Updates Now</string>
+    <string name="settings_manual_update_sub">GitHub • SametGkTe/GkTeDPI</string>
+    <string name="settings_battery_guard_title">Background Battery Protection</string>
+    <string name="settings_battery_guard_on">Unrestricted • Active</string>
+    <string name="settings_battery_guard_off">Tap to prevent background VPN sleep</string>
+    <string name="settings_about_row_title">About &amp; Terms of Use</string>
+    <string name="settings_about_row_sub">Description, Privacy &amp; Terms</string>
+
+    <string name="update_checking_toast">Checking GitHub for new releases...</string>
+    <string name="update_check_btn_short">Check Updates</string>
+    <string name="update_available_title">New Update Available</string>
+    <string name="update_new_version_fmt">New version %1$s is ready (Current: v%2$s)</string>
+    <string name="update_default_notes">Performance improvements and updated DPI bypass strategies.</string>
+    <string name="update_download_install_btn">Download &amp; Update</string>
+    <string name="update_open_github_btn">Open GitHub</string>
+    <string name="update_later_btn">Later</string>
+    <string name="update_downloading_title">Downloading Update...</string>
+    <string name="update_download_failed">Failed to download APK package</string>
+    <string name="update_allow_install_perm_toast">Allow GkTeDPI to install app updates</string>
+    <string name="update_up_to_date_title">Up to Date</string>
+    <string name="update_up_to_date_body">You are running the latest version of GkTeDPI (v%1$s).</string>
+    <string name="update_check_failed_fmt">Update check failed: %1$s</string>
+
+    <string name="onboarding_welcome_title">Welcome to GkTeDPI</string>
+    <string name="onboarding_welcome_body">GkTeDPI combines two engines in one app:\n• Simple DPI Mode: 100%% on-device C packet desync with zero speed loss.\n• Real Country VPN: Encrypted multi-country tunnel (Netherlands, US, Germany &amp; more) that changes your public IP.\n\nBy continuing, you accept the Terms of Use &amp; Privacy Policy. Allowing unrestricted background battery usage is recommended so Android keeps your tunnel active.</string>
+    <string name="onboarding_accept_btn">Accept &amp; Continue</string>
+
+    <string name="about_screen_title">About &amp; Terms</string>
+    <string name="about_full_desc_heading">About GkTeDPI</string>
+    <string name="about_full_desc_body">GkTeDPI v6 is a dual-engine connectivity &amp; anti-DPI platform built with native C/JNI cores (byedpi + hev-socks5-tunnel), a multi-country encrypted VPN relay, and an optical Liquid Glass interface.\n\n• Real Multi-Country VPN: Connect to real encrypted servers in the Netherlands, USA, Germany, UK, France, Poland, Romania, Sweden, Finland, Canada, Japan, and Singapore with 0-RTT payload coalescing, encrypted DNS, and automatic fastest-node failover.\n• Simple Zero-Loss DPI Mode: Bypass ISP packet inspection 100%% locally on your phone with simplified 1-tap modes (Auto, Discord &amp; Voice, Gaming, Strong Access, Mobile Data) while preserving your full bandwidth and ping.</string>
+    <string name="about_terms_heading">Terms of Use &amp; Privacy</string>
+    <string name="about_terms_body">1. Zero-Log Policy &amp; Privacy: GkTeDPI does not log, store, or sell your browsing history or DNS queries.\n\n2. Dual-Engine Scope: In Simple DPI Mode, traffic stays local and your public IP does not change. In Real VPN Mode, traffic and DNS are encrypted and routed through your selected country\'s exit node (changing your public IP).\n\n3. Lawful Usage Responsibility: You are solely responsible for using GkTeDPI in compliance with applicable laws and network terms in your jurisdiction.\n\n4. Open-Source Components &amp; Disclaimer: Provided \"AS IS\" without warranty of any kind. Incorporates open-source native components under their respective licenses.</string>
+    <string name="fatih_stealth_title">🏫 FATİH / School Firewall Bypass</string>
+    <string name="fatih_stealth_sub_off">JumpJump / X-VPN style Port 443 HTTPS disguise + 3-record TLS SNI split + CDN</string>
+    <string name="fatih_stealth_sub_on">ACTIVE • Port 443 HTTPS Disguise + Fragmented TLS + DoH + Clean CDN</string>
+    <string name="fatih_stealth_home_pill_off">🏫 FATİH / School Bypass: OFF</string>
+    <string name="fatih_stealth_home_pill_on">🏫 FATİH / School Bypass: ACTIVE (Port 443)</string>
+    <string name="fatih_stealth_enabled_toast">🏫 FATİH / School Bypass (Port 443 Stealth) enabled</string>
+    <string name="fatih_stealth_disabled_toast">Standard multi-port VPN mode restored</string>
+</resources>

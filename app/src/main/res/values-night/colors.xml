@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night / AMOLED Liquid Glass Palette (Default Full #000000 Black) -->
+    <color name="glass_bg_base">#FF000000</color>
+    <color name="glass_card_fill">#8C141D2B</color>
+    <color name="glass_card_fill_elevated">#AD182334</color>
+    <color name="glass_card_stroke_top">#E6FFFFFF</color>
+    <color name="glass_card_stroke_bottom">#664ADE80</color>
+    <color name="glass_pill_fill">#591E293B</color>
+    <color name="glass_pill_active_fill">#CC22C55E</color>
+    <color name="glass_divider">#38FFFFFF</color>
+
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFEAF1FA</color>
+    <color name="text_tertiary">#FFCBD5E1</color>
+
+    <color name="button_green_primary">#FF16A34A</color>
+    <color name="button_green_active">#FF22C55E</color>
+    <color name="button_green_muted">#5514532D</color>
+    <color name="accent_primary">#FF22C55E</color>
+    <color name="accent_secondary">#FF16A34A</color>
+    <color name="status_connected">#FF4ADE80</color>
+    <color name="status_connected_bg">#4015803D</color>
+    <color name="status_disconnected">#FFFFFFFF</color>
+    <color name="status_disconnected_bg">#331E293B</color>
+    <color name="danger_color">#FFEF4444</color>
+</resources>

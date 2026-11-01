@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Android 11+ (API 30+) otomatik paket görünürlüğü:
+         Bu AAR'ı ekleyen GkteTok / NectarLink / LM Playground uygulamalarının
+         kendi AndroidManifest dosyalarına ekstra <queries> yazmasına gerek kalmaz! -->
+    <queries>
+        <package android:name="com.sametgkte.gktedpi" />
+        <intent>
+            <action android:name="com.sametgkte.gktedpi.api.START" />
+        </intent>
+        <provider android:authorities="com.sametgkte.gktedpi.api" />
+    </queries>
+
+</manifest>

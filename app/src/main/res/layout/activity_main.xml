@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/glass_bg_base">
+
+    <!-- 1. FULL #000000 BLACK DEFAULT OR USER WALLPAPER BACKDROP -->
+    <com.sametgkte.gktedpi.ui.LiquidAmbientBackgroundView
+        android:id="@+id/ambientBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 2. MAIN VERTICAL STACK -->
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ======================================================= -->
+        <!-- TAB 0: ANA SAYFA (DECLUTTERED + DEDICATED SUNUCULAR)    -->
+        <!-- ======================================================= -->
+        <ScrollView
+            android:id="@+id/tabHomeScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- MINIMALIST BRAND HEADER -->
+                <LinearLayout
+                    android:id="@+id/headerGlassBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="26dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/ic_gkte_logo" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:text="DPI"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/btnQuickAppearance"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_appearance" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- CLEAN 3-WAY ENGINE SWITCHER (REAL VPN / LOCAL DPI / SOCKS5 PROXY) -->
+                <LinearLayout
+                    android:id="@+id/modesTopCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/modeChipRealVpn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_pill"
+                        android:fontFamily="@font/pjs_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/mode_btn_real_vpn"
+                        android:textColor="@color/text_primary"
+                        android:textSize="11.8sp" />
+
+                    <TextView
+                        android:id="@+id/modeChipVpn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_pill_active"
+                        android:fontFamily="@font/pjs_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/mode_btn_vpn"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="11.8sp" />
+
+                    <TextView
+                        android:id="@+id/modeChipProxy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_pill"
+                        android:fontFamily="@font/pjs_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/mode_btn_proxy"
+                        android:textColor="@color/text_primary"
+                        android:textSize="11.8sp" />
+                </LinearLayout>
+
+                <!-- HERO LIQUID GLASS ORB CARD -->
+                <LinearLayout
+                    android:id="@+id/heroGlassCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingStart="18dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="18dp"
+                    android:paddingBottom="18dp">
+
+                    <com.sametgkte.gktedpi.ui.LiquidOrbView
+                        android:id="@+id/powerOrb"
+                        android:layout_width="172dp"
+                        android:layout_height="172dp"
+                        android:clickable="true"
+                        android:contentDescription="@string/vpn_connect"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/statusButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/bg_green_cta_button"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:gravity="center"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:text="@string/vpn_connect"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="14.5sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/sessionTimerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:fontFamily="@font/modern_mono"
+                        android:text="00:00:00"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/proxyAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/modern_mono"
+                        android:text="127.0.0.1:1080"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/btnPingTestPill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_liquid_glass_pill"
+                        android:fontFamily="@font/pjs_bold"
+                        android:paddingStart="14dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="7dp"
+                        android:text="@string/ping_test_btn_idle"
+                        android:textColor="@color/text_primary"
+                        android:textSize="11.5sp" />
+                </LinearLayout>
+
+                <!-- ELECTRON-STYLE 2-COLUMN TELEMETRY BENTO TILES -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/bentoDownCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_bold"
+                            android:letterSpacing="0.06"
+                            android:text="@string/download_label"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/downSpeedText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/modern_mono"
+                            android:text="↓ 0 B/s"
+                            android:textColor="@color/button_green_active"
+                            android:textSize="15.5sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/downTotalText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/modern_mono"
+                            android:text="0 B"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bentoUpCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_bold"
+                            android:letterSpacing="0.06"
+                            android:text="@string/upload_label"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/upSpeedText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/modern_mono"
+                            android:text="↑ 0 B/s"
+                            android:textColor="#FF38BDF8"
+                            android:textSize="15.5sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/upTotalText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/modern_mono"
+                            android:text="0 B"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- BOTTOM "SUNUCULAR" COMPARTMENT SELECTOR (VISIBLE WHEN VPN SELECTED) -->
+                <LinearLayout
+                    android:id="@+id/serversSelectorCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/serversSelectorIconBox"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="13dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/serversSelectorFlagText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="🇳🇱"
+                            android:textSize="20sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/serversSelectorIconImg"
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:src="@drawable/ic_vec_servers" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/serversCardKicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_bold"
+                            android:letterSpacing="0.06"
+                            android:text="@string/servers_card_kicker"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/activeServerTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/pjs_extrabold"
+                            android:maxLines="1"
+                            android:text="TR • Evrensel Akıllı Mod"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/activeServerSub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/modern_mono"
+                            android:text="DNS 1.1.1.1 • MTU 8500"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_vec_chevron" />
+                </LinearLayout>
+
+                <!-- 1-TAP FATİH / SCHOOL STEALTH BYPASS QUICK PILL (VISIBLE IN REAL VPN MODE) -->
+                <TextView
+                    android:id="@+id/btnFatihStealthQuickPill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/bg_liquid_glass_pill"
+                    android:fontFamily="@font/pjs_bold"
+                    android:gravity="center"
+                    android:paddingTop="11dp"
+                    android:paddingBottom="11dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@string/fatih_stealth_home_pill_off"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12.5sp"
+                    android:visibility="gone" />
+
+                <!-- PROXY QUICK ENDPOINT CARD (VISIBLE WHEN SOCKS5 PROXY SELECTED) -->
+                <LinearLayout
+                    android:id="@+id/proxyEndpointCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/proxyEndpointIconBox"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="13dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:src="@drawable/ic_vec_terminal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_bold"
+                            android:letterSpacing="0.06"
+                            android:text="@string/proxy_card_kicker"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/pjs_extrabold"
+                            android:text="@string/proxy_card_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/proxyEndpointSub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/modern_mono"
+                            android:text="127.0.0.1:1080"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_vec_chevron" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ======================================================= -->
+        <!-- TAB 1: UTILITIES (GKTE CONNECT TOOL)                    -->
+        <!-- ======================================================= -->
+        <ScrollView
+            android:id="@+id/tabUtilitiesScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/utilitiesHeroCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="26dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/ic_gkte_logo" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:text="@string/gkte_connect_tool_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Row 1: NectarLink & LM Playground (REAL APP ICONS RESTORED) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/cardNectarLink"
+                        android:layout_width="0dp"
+                        android:layout_height="154dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="12dp"
+                            android:contentDescription="NectarLink"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_app_nectarlink" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_extrabold"
+                            android:text="NectarLink"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15.5sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/pjs_medium"
+                            android:text="@string/utility_nectarlink_desc"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11.5sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardLmPlayground"
+                        android:layout_width="0dp"
+                        android:layout_height="154dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="12dp"
+                            android:contentDescription="LM Playground"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_app_lmplayground" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_extrabold"
+                            android:text="LM Playground"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15.5sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/pjs_medium"
+                            android:text="@string/utility_lmplayground_desc"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11.5sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Row 2: Shizuku & Akıllı Merkez (REAL APP ICONS RESTORED) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/cardShizuku"
+                        android:layout_width="0dp"
+                        android:layout_height="154dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="12dp"
+                            android:contentDescription="Shizuku"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_app_shizuku" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_extrabold"
+                            android:text="Shizuku"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15.5sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/pjs_medium"
+                            android:text="@string/utility_shizuku_desc"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11.5sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardSmartHub"
+                        android:layout_width="0dp"
+                        android:layout_height="154dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="12dp"
+                            android:contentDescription="@string/smart_hub_short"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_gktedpi_emblem" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_extrabold"
+                            android:text="@string/smart_hub_short"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="15.5sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/pjs_medium"
+                            android:maxLines="2"
+                            android:text="@string/smart_bento_sub"
+                            android:textColor="#E0FFFFFF"
+                            android:textSize="11.5sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ======================================================= -->
+        <!-- TAB 2: AYARLAR (ELECTRON BATTERY APP BENTO + CARDS)     -->
+        <!-- ======================================================= -->
+        <ScrollView
+            android:id="@+id/tabSettingsScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="18dp"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- CLEAN ELECTRON-STYLE SETTINGS HEADER -->
+                <LinearLayout
+                    android:id="@+id/settingsHeaderCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pjs_extrabold"
+                        android:text="@string/tab_settings"
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/settingsHeaderVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/modern_mono"
+                        android:text="v5.1.0"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11.5sp" />
+                </LinearLayout>
+
+                <!-- ELECTRON HERO BENTO ROW: UNIFIED APPEARANCE + SMART CENTER -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/bentoAppearanceHub"
+                        android:layout_width="0dp"
+                        android:layout_height="122dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="12dp"
+                            android:src="@drawable/ic_vec_appearance" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_extrabold"
+                            android:text="@string/appearance_bento_title"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/pjs_medium"
+                            android:text="@string/appearance_bento_sub"
+                            android:textColor="#E2FFFFFF"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bentoSmartCenter"
+                        android:layout_width="0dp"
+                        android:layout_height="122dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liquid_glass_card"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="12dp"
+                            android:src="@drawable/ic_vec_bolt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pjs_extrabold"
+                            android:text="@string/smart_bento_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/pjs_medium"
+                            android:text="@string/smart_bento_sub"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- GROUP 1: NETWORK & TUNNEL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/pjs_extrabold"
+                    android:letterSpacing="0.06"
+                    android:text="@string/settings_sec_network"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:id="@+id/cardSettingsNetwork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <!-- Row: DNS -->
+                    <LinearLayout
+                        android:id="@+id/rowDnsSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxDns"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_globe" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_bold"
+                                android:text="@string/settings_dns_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/valDnsSummary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/modern_mono"
+                                android:text="1.1.1.1"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+
+                    <!-- Row: Split Tunnel -->
+                    <LinearLayout
+                        android:id="@+id/rowSplitTunnel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxSplit"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_grid" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_bold"
+                                android:text="@string/split_tunnel_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/valSplitSummary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_medium"
+                                android:text="@string/split_mode_disabled"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+
+                    <!-- Row: MTU & Port -->
+                    <LinearLayout
+                        android:id="@+id/rowMtuPort"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxMtu"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_servers" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_bold"
+                                android:text="@string/settings_mtu_port_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/valMtuPortSummary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/modern_mono"
+                                android:text="MTU 8500 • Port 1080"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+
+                    <!-- Switch: LAN Bypass -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/settings_lan_bypass_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchLanBypass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <!-- Switch: IPv6 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/settings_ipv6_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchIpv6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- GROUP 2: DPI ENGINE -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/pjs_extrabold"
+                    android:letterSpacing="0.06"
+                    android:text="@string/settings_sec_engine"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:id="@+id/cardSettingsEngine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/settings_cli_mode_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchCliMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowEditDpiParams"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxParams"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_terminal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_bold"
+                                android:text="@string/settings_edit_params_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/valDpiCmdSummary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/modern_mono"
+                                android:maxLines="1"
+                                android:text="-d 1 -r 1+s -M h,d -a 2"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowStrategyTest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxStrategy"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_bolt" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/strategy_tester_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- GROUP 3: SYSTEM, API & BACKUP -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/pjs_extrabold"
+                    android:letterSpacing="0.06"
+                    android:text="@string/settings_sec_system"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:id="@+id/cardSettingsSystem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/settings_boot_start_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchBootStart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowBatteryGuard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxBattery"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_bolt" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_bold"
+                                android:text="@string/settings_battery_guard_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/valBatteryGuardSummary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_medium"
+                                android:text="@string/settings_battery_guard_off"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowExternalApi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxApi"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_terminal" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/external_api_category"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowLogsBackup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxLogs"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_grid" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/logs_backup_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowResetAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/reset_settings"
+                            android:textColor="@color/danger_color"
+                            android:textSize="13.5sp" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- GROUP 4: GITHUB SELF-UPDATER & ABOUT / TERMS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="@font/pjs_extrabold"
+                    android:letterSpacing="0.06"
+                    android:text="@string/settings_sec_updates_about"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:id="@+id/cardSettingsUpdatesAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_liquid_glass_card"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pjs_bold"
+                            android:text="@string/settings_auto_update_title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchAutoUpdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowCheckUpdatesNow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxUpdate"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_vec_globe" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_bold"
+                                android:text="@string/settings_manual_update_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/modern_mono"
+                                android:text="@string/settings_manual_update_sub"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowAboutScreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/iconBoxAbout"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_gkte_logo" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_bold"
+                                android:text="@string/settings_about_row_title"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pjs_medium"
+                                android:text="@string/settings_about_row_sub"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_vec_chevron" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ======================================================= -->
+        <!-- DOCKED LIQUID GLASS 3-TAB BAR                           -->
+        <!-- ======================================================= -->
+        <com.sametgkte.gktedpi.ui.LiquidGlassBottomBar
+            android:id="@+id/bottomGlassNav"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp" />
+
+    </LinearLayout>
+
+</FrameLayout>
