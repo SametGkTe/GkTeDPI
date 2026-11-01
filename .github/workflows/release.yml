@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release etiketi (ör. v6.0.0)'
+        required: false
+        default: 'v6.0.0'
 
 permissions:
   contents: write
@@ -14,10 +20,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout GkTeDPI with Submodules
+      - name: Checkout GkTeDPI
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
+      - name: Ensure Native Sources Present
+        run: |
+          if [ ! -f "app/src/main/cpp/byedpi/main.c" ]; then
+            rm -rf app/src/main/cpp/byedpi
+            git clone --depth 1 https://github.com/hufrea/byedpi.git app/src/main/cpp/byedpi
+          fi
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -28,7 +41,7 @@ jobs:
       - name: Setup Android SDK & NDK
         uses: android-actions/setup-android@v3
 
-      - name: Install NDK 26.1 & CMake 3.22.1
+      - name: Install Android SDK 34, NDK 26.1 & CMake 3.22.1
         run: |
           yes | sdkmanager --licenses > /dev/null || true
           sdkmanager "platforms;android-34" "build-tools;34.0.0" "ndk;26.1.10909125" "cmake;3.22.1"
@@ -36,25 +49,60 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Decode Release Keystore (Optional)
-        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+      - name: Prepare Release Keystore
+        env:
+          SECRET_KEYSTORE_B64: ${{ secrets.KEYSTORE_BASE64 }}
+          SECRET_KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          SECRET_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          SECRET_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > "${RUNNER_TEMP}/release.jks"
-          echo "KEYSTORE_PATH=${RUNNER_TEMP}/release.jks" >> $GITHUB_ENV
+          if [ -n "${SECRET_KEYSTORE_B64}" ]; then
+            echo "${SECRET_KEYSTORE_B64}" | base64 --decode > "${RUNNER_TEMP}/release.jks"
+            echo "KEYSTORE_PATH=${RUNNER_TEMP}/release.jks" >> "$GITHUB_ENV"
+            echo "KEYSTORE_PASSWORD=${SECRET_KEYSTORE_PASSWORD}" >> "$GITHUB_ENV"
+            echo "KEY_ALIAS=${SECRET_KEY_ALIAS}" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=${SECRET_KEY_PASSWORD}" >> "$GITHUB_ENV"
+          elif [ -f "keystore/gktedpi-release.jks" ] && keytool -list -keystore "keystore/gktedpi-release.jks" -storepass "gktedpi2026" >/dev/null 2>&1; then
+            echo "KEYSTORE_PATH=${GITHUB_WORKSPACE}/keystore/gktedpi-release.jks" >> "$GITHUB_ENV"
+            echo "KEYSTORE_PASSWORD=gktedpi2026" >> "$GITHUB_ENV"
+            echo "KEY_ALIAS=gktedpi" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=gktedpi2026" >> "$GITHUB_ENV"
+          else
+            keytool -genkeypair \
+              -keystore "${RUNNER_TEMP}/ci-release.jks" \
+              -storetype PKCS12 \
+              -alias gktedpi \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 10000 \
+              -storepass gktedpi2026 \
+              -keypass gktedpi2026 \
+              -dname "CN=GkTeDPI, OU=GkTe Archive, O=SametGkTe, C=TR"
+            echo "KEYSTORE_PATH=${RUNNER_TEMP}/ci-release.jks" >> "$GITHUB_ENV"
+            echo "KEYSTORE_PASSWORD=gktedpi2026" >> "$GITHUB_ENV"
+            echo "KEY_ALIAS=gktedpi" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=gktedpi2026" >> "$GITHUB_ENV"
+          fi
 
-      - name: Build Release APKs
+      - name: Determine Release Tag
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            echo "RELEASE_TAG=${GITHUB_REF_NAME}" >> "$GITHUB_ENV"
+          else
+            INPUT_TAG="${{ inputs.tag }}"
+            echo "RELEASE_TAG=${INPUT_TAG:-v6.0.0}" >> "$GITHUB_ENV"
+          fi
+
+      - name: Build Signed Release APKs
         env:
           SPLIT_APK: "true"
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           chmod +x gradlew
+          rm -f local.properties
           ./gradlew assembleRelease --no-daemon
           mkdir -p release-assets
-          TAG_NAME="${GITHUB_REF_NAME}"
           for apk in app/build/outputs/apk/release/*.apk; do
-            base=$(basename "$apk" | sed "s/app-/GkTeDPI-${TAG_NAME}-/")
+            base=$(basename "$apk" | sed "s/app-/GkTeDPI-${RELEASE_TAG}-/")
             cp "$apk" "release-assets/$base"
           done
           cd release-assets && sha256sum *.apk > SHA256SUMS.txt
@@ -62,5 +110,7 @@ jobs:
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: GkTeDPI ${{ env.RELEASE_TAG }}
           generate_release_notes: true
           files: release-assets/*
